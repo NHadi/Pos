@@ -1,6 +1,7 @@
 version: '3.4'
 
 services:
+
   pos.report.webapi:
     image: ${DOCKER_REGISTRY-}posreportwebapi
     build:
@@ -13,20 +14,19 @@ services:
       context: .
       dockerfile: Pos.Product.WebApi/Dockerfile
 
-
   pos.order.webapi:
     image: ${DOCKER_REGISTRY-}posorderwebapi
     build:
       context: .
       dockerfile: Pos.Order.WebApi/Dockerfile
 
-
   pos.customer.webapi:
     image: ${DOCKER_REGISTRY-}poscustomerwebapi
     build:
       context: .
       dockerfile: Pos.Customer.WebApi/Dockerfile
-
+    depends_on:
+      - sql.data
 
   pos.webapplication:
     image: ${DOCKER_REGISTRY-}poswebapplication
@@ -41,3 +41,43 @@ services:
       context: .
       dockerfile: Pos.Gateway/Dockerfile
 
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5434:1433"
+
+  kafkaserver:
+    image: "spotify/kafka:latest"
+    ports:
+      - 2181
+      - 9092
+    environment:
+      ADVERTISED_HOST: kafkaserver
+      ADVERTISED_PORT: 9092
+
+  mongodb:
+    image: mongo
+    ports:
+      - 27018:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+  
+  mongo-express:
+    image: mongo-express
+    environment:
+        - ME_CONFIG_MONGODB_SERVER=mongodb
+        - ME_CONFIG_MONGODB_PORT=27017
+        - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
+        - ME_CONFIG_MONGODB_AUTH_DATABASE=admin
+        - ME_CONFIG_MONGODB_AUTH_USERNAME=root
+        - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+        - ME_CONFIG_MONGODB_AUTH_PASSWORD=password
+        - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+    depends_on:
+        - mongodb
+    ports:
+      - "8081"  

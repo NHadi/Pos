@@ -1,9 +1,10 @@
 version: '3.4'
 
 services:
+
   pos.report.webapi:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Development      
     ports:
       - "80"
 
@@ -13,31 +14,26 @@ services:
     ports:
       - "80"
 
-
   pos.order.webapi:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
 
-
   pos.customer.webapi:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_ENVIRONMENT=Development            
     ports:
       - "80"
-
 
   pos.webapplication:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - "80"
-
+      - "80"    
 
   pos.gateway:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80"
-
