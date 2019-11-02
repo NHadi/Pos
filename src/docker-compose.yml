@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+  pos.report.webapi:
+    image: ${DOCKER_REGISTRY-}posreportwebapi
+    build:
+      context: .
+      dockerfile: Pos.Report.WebApi/Dockerfile
+
+  pos.product.webapi:
+    image: ${DOCKER_REGISTRY-}posproductwebapi
+    build:
+      context: .
+      dockerfile: Pos.Product.WebApi/Dockerfile
+
+
+  pos.order.webapi:
+    image: ${DOCKER_REGISTRY-}posorderwebapi
+    build:
+      context: .
+      dockerfile: Pos.Order.WebApi/Dockerfile
+
+
+  pos.customer.webapi:
+    image: ${DOCKER_REGISTRY-}poscustomerwebapi
+    build:
+      context: .
+      dockerfile: Pos.Customer.WebApi/Dockerfile
+
+
+  pos.webapplication:
+    image: ${DOCKER_REGISTRY-}poswebapplication
+    build:
+      context: .
+      dockerfile: Pos.WebApplication/Dockerfile
+
+
+  pos.gateway:
+    image: ${DOCKER_REGISTRY-}posgateway
+    build:
+      context: .
+      dockerfile: Pos.Gateway/Dockerfile
+
