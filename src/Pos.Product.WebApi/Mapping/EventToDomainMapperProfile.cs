@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Pos.Customer.WebApi.Application.Commands;
+using Pos.Product.Domain.Events;
 using Pos.Product.Domain.ProductAggregate;
 using Pos.Product.WebApi.Application.Commands;
 using Pos.Product.WebApi.Application.Commands.ProductCategories;
@@ -10,19 +11,17 @@ using System.Threading.Tasks;
 
 namespace Pos.Product.WebApi.Mapping
 {
-    public class CommandToDomainMapperProfile : Profile
+    public class EventToDomainMapperProfile : Profile
     {
-        public CommandToDomainMapperProfile()
+        public EventToDomainMapperProfile()
         {
-            CreateMap<CreateProductCommand, MstProduct>()
+            CreateMap<ProductCreatedEvent, MstProduct>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()));
-            CreateMap<UpdateProductCommand, MstProduct>();                
-            CreateMap<DeleteProductCommand, MstProduct>();
+            CreateMap<ProductUpdatedEvent, MstProduct>();                            
 
-            CreateMap<CreateProductCategoryCommand, ProductCategory>()
+            CreateMap<ProductCategoryCreatedEvent, ProductCategory>()
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()));
-            CreateMap<UpdateProductCategoryCommand, ProductCategory>();
-            CreateMap<DeleteProductCategoryCommand, ProductCategory>();
+            CreateMap<ProductCategoryUpdatedEvent, ProductCategory>();            
         }
     }
 }

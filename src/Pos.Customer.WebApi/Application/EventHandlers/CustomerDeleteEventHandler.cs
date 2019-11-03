@@ -6,6 +6,7 @@ using Dermayon.Infrastructure.EvenMessaging.Kafka.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using Pos.Customer.Domain.CustomerAggregate;
+using Pos.Customer.Domain.Events;
 using Pos.Customer.Infrastructure;
 using Pos.Customer.WebApi.Application.Commands;
 using Pos.Customer.WebApi.Application.Queries;
@@ -43,7 +44,7 @@ namespace Pos.Customer.WebApi.Application.EventHandlers
             {
                 log.Info("Consume CustomerDeletedEvent");
 
-                var dataConsomed = jObject.ToObject<DeleteCustomerCommand>();
+                var dataConsomed = jObject.ToObject<CustomerDeletedEvent>();
 
                 var data = await _customerQueries.GetCustomer(dataConsomed.CustomerId);
 

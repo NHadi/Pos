@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Pos.Customer.WebApi.Application.Commands
+namespace Pos.Product.WebApi.Application.Commands
 {
     public class UpdateProductCommand : ICommand
     {

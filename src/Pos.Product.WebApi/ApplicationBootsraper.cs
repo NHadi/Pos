@@ -57,8 +57,10 @@ namespace Pos.Product.WebApi
         {
             var mapperConfig = new MapperConfiguration(cfg =>
             {
-                cfg.AddProfile(new CommandToDomainMapperProfile());
+                cfg.AddProfile(new CommandToEventMapperProfile());
                 cfg.AddProfile(new DomainToCommandMapperProfile());
+                cfg.AddProfile(new EventToDomainMapperProfile());
+                
             });            
             services.AddSingleton(provider => mapperConfig.CreateMapper());
 

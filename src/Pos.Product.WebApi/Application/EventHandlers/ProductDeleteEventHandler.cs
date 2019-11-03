@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using Pos.Customer.WebApi.Application.Commands;
 using Pos.Customer.WebApi.Application.Queries;
+using Pos.Product.Domain.Events;
 using Pos.Product.Domain.ProductAggregate;
 using Pos.Product.Domain.ProductAggregate.Contracts;
 using Pos.Product.Infrastructure;
@@ -46,7 +47,7 @@ namespace Pos.Product.WebApi.Application.EventHandlers
             {
                 log.Info("Consume ProductDeletedEvent");
 
-                var dataConsomed = jObject.ToObject<DeleteProductCommand>();
+                var dataConsomed = jObject.ToObject<ProductDeletedEvent>();
 
                 var data = await _ProductQueries.GetProduct(dataConsomed.ProductId);
 

@@ -8,7 +8,6 @@ namespace Pos.Product.Domain.Events
     [Event("ProductCategoryCreated")]
     public class ProductCategoryCreatedEvent : IEvent
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public DateTime CreatedAt { get; set; }
     }

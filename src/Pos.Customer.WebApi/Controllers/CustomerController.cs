@@ -40,7 +40,7 @@ namespace Pos.Customer.WebApi.Controllers
             _logger = logger;
         }
 
-        // GET api/values
+        // GET api/customer
         [HttpGet]
         public async Task<IActionResult> Get()
         {
@@ -57,7 +57,7 @@ namespace Pos.Customer.WebApi.Controllers
             }
         }
 
-        // GET api/values/5
+        // GET api/customer/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {

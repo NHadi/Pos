@@ -5,6 +5,7 @@ using Dermayon.Infrastructure.Data.EFRepositories.Contracts;
 using Dermayon.Infrastructure.EvenMessaging.Kafka.Contracts;
 using Newtonsoft.Json.Linq;
 using Pos.Customer.Domain.CustomerAggregate;
+using Pos.Customer.Domain.Events;
 using Pos.Customer.Infrastructure;
 using Pos.Customer.WebApi.Application.Commands;
 using System;
@@ -38,7 +39,7 @@ namespace Pos.Customer.WebApi.Application.EventHandlers
             {
                 log.Info("Consume CustomerCreatedEvent");
 
-                var dataConsomed = jObject.ToObject<CreateCustomerCommand>();
+                var dataConsomed = jObject.ToObject<CustomerCreatedEvent>();
                 var data = _mapper.Map<MstCustomer>(dataConsomed);
 
                 log.Info("Insert Customer");

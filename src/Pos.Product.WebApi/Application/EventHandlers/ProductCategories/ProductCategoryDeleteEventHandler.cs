@@ -6,6 +6,7 @@ using Dermayon.Infrastructure.EvenMessaging.Kafka.Contracts;
 using Newtonsoft.Json.Linq;
 using Pos.Customer.WebApi.Application.Commands;
 using Pos.Customer.WebApi.Application.Queries;
+using Pos.Product.Domain.Events;
 using Pos.Product.Domain.ProductAggregate.Contracts;
 using Pos.Product.Infrastructure;
 using Pos.Product.WebApi.Application.Queries;
@@ -41,9 +42,9 @@ namespace Pos.Customer.WebApi.Application.EventHandlers
             {
                 log.Info("Consume DeletedEvent");
 
-                var dataConsomed = jObject.ToObject<DeleteProductCategoryCommand>();
+                var dataConsomed = jObject.ToObject<ProductCategoryDeletedEvent>();
 
-                var data = await _productCategoryQueries.GetData(dataConsomed.PoductCategoryId);
+                var data = await _productCategoryQueries.GetData(dataConsomed.ProductCategoryId);
 
                 log.Info("Delete Customer");
 

@@ -5,6 +5,7 @@ using Dermayon.Infrastructure.Data.EFRepositories.Contracts;
 using Dermayon.Infrastructure.EvenMessaging.Kafka.Contracts;
 using Newtonsoft.Json.Linq;
 using Pos.Customer.Domain.CustomerAggregate;
+using Pos.Customer.Domain.Events;
 using Pos.Customer.Infrastructure;
 using Pos.Customer.WebApi.Application.Commands;
 using Pos.Customer.WebApi.Application.Queries;
@@ -42,7 +43,7 @@ namespace Pos.Customer.WebApi.Application.EventHandlers
             {
                 log.Info("Consume CustomerUpdatedEvent");
 
-                var dataConsomed = jObject.ToObject<UpdateCustomerCommand>();
+                var dataConsomed = jObject.ToObject<CustomerUpdatedEvent>();
 
                 var data = await _customerQueries.GetCustomer(dataConsomed.CustomerId);
                 if (data != null)
