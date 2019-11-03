@@ -33,7 +33,9 @@ namespace Pos.Customer.WebApi
                    .InitKafka()
                        .Configure<KafkaEventConsumerConfiguration>(Configuration.GetSection("KafkaConsumer"))
                        .Configure<KafkaEventProducerConfiguration>(Configuration.GetSection("KafkaProducer"))
-                   .RegisterKafkaConsumer<CustomerCreatedEvent, CustomerCreateEventHandler>()
+                        .RegisterKafkaConsumer<CustomerCreatedEvent, CustomerCreateEventHandler>()
+                        .RegisterKafkaConsumer<CustomerUpdatedEvent, CustomerUpdateEventHandler>()
+                        .RegisterKafkaConsumer<CustomerDeletedEvent, CustomerDeleteEventHandler>()
                    .RegisterMongo()
                    // Implement CQRS Event Sourcing => UserContextEvents [Commands]
                    .RegisterEventSources()
@@ -53,7 +55,8 @@ namespace Pos.Customer.WebApi
         {
             var mapperConfig = new MapperConfiguration(cfg =>
             {
-                cfg.AddProfile(new CommandToDomainMapperProfile());                
+                cfg.AddProfile(new CommandToDomainMapperProfile());
+                cfg.AddProfile(new DomainToCommandMapperProfile());
             });            
             services.AddSingleton(provider => mapperConfig.CreateMapper());
 
@@ -75,6 +78,12 @@ namespace Pos.Customer.WebApi
         {
             services.AddTransient<ICommandHandler<CreateCustomerCommand>, CreateCustomerCommandHandler>();
             services.AddTransient<CustomerCreateEventHandler>();
+
+            services.AddTransient<ICommandHandler<UpdateCustomerCommand>, UpdateCustomerCommandHandler>();
+            services.AddTransient<CustomerUpdateEventHandler>();
+
+            services.AddTransient<ICommandHandler<DeleteCustomerCommand>, DeleteCustomerCommandHandler>();
+            services.AddTransient<CustomerDeleteEventHandler>();
             return services;
         }
     }

@@ -13,7 +13,14 @@ namespace Pos.Customer.WebApi.Mapping
         public CommandToDomainMapperProfile()
         {
             CreateMap<CreateCustomerCommand, MstCustomer>()
-                .ForMember(x => x.Id, o => o.MapFrom(s => Guid.NewGuid()));                
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()));
+
+            CreateMap<UpdateCustomerCommand, MstCustomer>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CustomerId));                
+
+            CreateMap<DeleteCustomerCommand, MstCustomer>()
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.CustomerId));
+            
         }
     }
 }

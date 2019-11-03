@@ -3,31 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Order.WebApi", "Pos.Order.WebApi\Pos.Order.WebApi.csproj", "{E4666D89-11BD-45C7-A206-0956D0822959}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Order.WebApi", "Pos.Order.WebApi\Pos.Order.WebApi.csproj", "{E4666D89-11BD-45C7-A206-0956D0822959}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3761F5BB-0193-400D-8119-82DF1DC58376}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{9D90E19B-3E65-44B6-AD66-BE5E77202FB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Product.WebApi", "Pos.Product.WebApi\Pos.Product.WebApi.csproj", "{219C140C-98FF-4C41-A572-32BB179AA600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Product.WebApi", "Pos.Product.WebApi\Pos.Product.WebApi.csproj", "{219C140C-98FF-4C41-A572-32BB179AA600}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Customer.WebApi", "Pos.Customer.WebApi\Pos.Customer.WebApi.csproj", "{C207A5E4-B81A-4A4E-B679-89D141906FA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Customer.WebApi", "Pos.Customer.WebApi\Pos.Customer.WebApi.csproj", "{C207A5E4-B81A-4A4E-B679-89D141906FA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Report.WebApi", "Pos.Report.WebApi\Pos.Report.WebApi.csproj", "{D27B3534-A4A1-457A-8773-3FDC5DE04C2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Report.WebApi", "Pos.Report.WebApi\Pos.Report.WebApi.csproj", "{D27B3534-A4A1-457A-8773-3FDC5DE04C2C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gateway", "gateway", "{9DBD7EDE-88CD-4CF8-BFE4-848C612A81A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Gateway", "Pos.Gateway\Pos.Gateway.csproj", "{3B9CF621-A375-4AEF-9873-B03975AD7466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Gateway", "Pos.Gateway\Pos.Gateway.csproj", "{3B9CF621-A375-4AEF-9873-B03975AD7466}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{916503CE-7FE3-4815-843D-51A9C4562ED0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.WebApplication", "Pos.WebApplication\Pos.WebApplication.csproj", "{E28E1810-899E-48A3-87FA-539702277237}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.WebApplication", "Pos.WebApplication\Pos.WebApplication.csproj", "{E28E1810-899E-48A3-87FA-539702277237}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "order", "order", "{CDB55524-F464-4AF1-A5F6-B4CFC26C1415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Order.Domain", "Pos.Order.Domain\Pos.Order.Domain.csproj", "{F20B1D17-FFD7-4185-9F57-8A75F4653F7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Order.Domain", "Pos.Order.Domain\Pos.Order.Domain.csproj", "{F20B1D17-FFD7-4185-9F57-8A75F4653F7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Order.Infrastructure", "Pos.Order.Infrastructure\Pos.Order.Infrastructure.csproj", "{A03EFC55-7A32-43F3-8CB7-475FA75BAC12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Order.Infrastructure", "Pos.Order.Infrastructure\Pos.Order.Infrastructure.csproj", "{A03EFC55-7A32-43F3-8CB7-475FA75BAC12}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "product", "product", "{EDF39043-651E-48DE-B1EC-B6EDB713C134}"
 EndProject
@@ -35,17 +35,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "customer", "customer", "{1C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "report", "report", "{EF5DAE79-4F6D-4620-BC38-C84DE4AB261A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Customer.Domain", "Pos.Customer.Domain\Pos.Customer.Domain.csproj", "{899028B9-199D-469B-9A2A-CA702D85B884}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Customer.Domain", "Pos.Customer.Domain\Pos.Customer.Domain.csproj", "{899028B9-199D-469B-9A2A-CA702D85B884}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Customer.Infrastructure", "Pos.Customer.Infrastructure\Pos.Customer.Infrastructure.csproj", "{450612BB-269F-405D-9BFC-BD4EE27E8E4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Customer.Infrastructure", "Pos.Customer.Infrastructure\Pos.Customer.Infrastructure.csproj", "{450612BB-269F-405D-9BFC-BD4EE27E8E4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Product.Infrastructure", "Pos.Product.Infrastructure\Pos.Product.Infrastructure.csproj", "{A3F12B60-A094-4C3E-9C6E-27C7F7BEFE54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Product.Infrastructure", "Pos.Product.Infrastructure\Pos.Product.Infrastructure.csproj", "{A3F12B60-A094-4C3E-9C6E-27C7F7BEFE54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Product.Domain", "Pos.Product.Domain\Pos.Product.Domain.csproj", "{2B6B64BE-E944-4EF6-9756-07F37A8C927C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Product.Domain", "Pos.Product.Domain\Pos.Product.Domain.csproj", "{2B6B64BE-E944-4EF6-9756-07F37A8C927C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Report.Domain", "Pos.Report.Domain\Pos.Report.Domain.csproj", "{B19DF5E4-C4A8-4574-8C8F-FE64C049A7DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Report.Domain", "Pos.Report.Domain\Pos.Report.Domain.csproj", "{B19DF5E4-C4A8-4574-8C8F-FE64C049A7DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pos.Report.Infrastructure", "Pos.Report.Infrastructure\Pos.Report.Infrastructure.csproj", "{78293DCC-E215-4A89-810A-C440FAEC095B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pos.Report.Infrastructure", "Pos.Report.Infrastructure\Pos.Report.Infrastructure.csproj", "{78293DCC-E215-4A89-810A-C440FAEC095B}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E11DCA28-A1EC-472F-879A-B0E4FAAB5224}"
 EndProject

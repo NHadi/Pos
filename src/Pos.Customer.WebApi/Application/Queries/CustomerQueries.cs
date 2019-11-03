@@ -11,10 +11,12 @@ namespace Pos.Customer.WebApi.Application.Queries
     public class CustomerQueries : ICustomerQueries
     {
         private readonly IDbConectionFactory _dbConectionFactory;
+        private readonly ICustomerRepository _customerRepository;
 
-        public CustomerQueries(IDbConectionFactory dbConectionFactory)
+        public CustomerQueries(IDbConectionFactory dbConectionFactory, ICustomerRepository customerRepository)
         {
             _dbConectionFactory = dbConectionFactory;
+            _customerRepository = customerRepository;
         }
 
 
@@ -22,12 +24,18 @@ namespace Pos.Customer.WebApi.Application.Queries
         {
             try
             {
-                var qry = "SELECT * FROM Customer where Id = @p_id";
+                var result = new MstCustomer();
 
-                var data = await new DapperRepository<MstCustomer>(_dbConectionFactory.GetDbConnection("CUSTOMER_READ_CONNECTION"))
-                    .QueryAsync(qry, new { p_id= id });
+                //var qry = "SELECT * FROM Customer where Id = @p_id";
 
-                return data.SingleOrDefault();
+                //var data = await new DapperRepository<MstCustomer>(_dbConectionFactory.GetDbConnection("CUSTOMER_READ_CONNECTION"))
+                //    .QueryAsync(qry, new { p_id= id });
+
+                var data = await _customerRepository.GetAsync(x => x.Id == id, false);
+
+                result = data.SingleOrDefault();
+
+                return result;
             }
             catch (Exception ex)
             {
