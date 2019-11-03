@@ -6,7 +6,7 @@
     <ProjectGuid>e11dca28-a1ec-472f-879a-b0e4faab5224</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/</DockerServiceUrl>
-    <DockerServiceName>pos.gateway</DockerServiceName>
+    <DockerServiceName>pos.webapplication</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

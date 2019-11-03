@@ -1,0 +1,50 @@
+/* Alert */
+
+.alert {
+  .btn {
+    margin-top: 10px;
+  }
+}
+.alert-success {
+  background-color: $success;
+  border-color: $success;
+  color: $white;
+
+  .alert-link {
+    color: $white;
+  }
+}
+.alert-info {
+  background-color: $info;
+  border-color: $info;
+  color: $white;
+
+  .alert-link {
+    color: $white;
+  }
+
+}
+.alert-warning {
+  background-color: $warning;
+  border-color: $warning;
+  color: $white;
+
+  .alert-link {
+    color: $white;
+  }
+}
+.alert-danger {
+  background-color: $danger;
+  border-color: $danger;
+  color: $white;
+
+  .alert-link {
+    color: $white;
+  }
+}
+
+
+//Notification
+.notifyjs-metro-base {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) !important;
+}

@@ -1,0 +1,142 @@
+/* =============
+   Progressbars
+============= */
+
+
+.progress {
+  -webkit-box-shadow: none !important;
+  background-color: darken($white,10%);
+  box-shadow: none !important;
+  height: 10px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  box-shadow: none;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 12px;
+}
+
+.progress.progress-sm {
+  height: 5px !important;
+  .progress-bar {
+    font-size: 8px;
+    line-height: 5px;
+  }
+}
+
+.progress.progress-md {
+  height: 15px !important;
+  .progress-bar {
+    font-size: 10.8px;
+    line-height: 14.4px;
+  }
+}
+
+.progress.progress-lg {
+  height: 1rem !important;
+  .progress-bar {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.progress-bar-primary {
+  background-color: $primary;
+}
+
+.progress-bar-success {
+  background-color: $success;
+}
+
+.progress-bar-info {
+  background-color: $info;
+}
+
+.progress-bar-warning {
+  background-color: $warning;
+}
+
+.progress-bar-danger {
+  background-color: $danger;
+}
+
+.progress-bar-inverse {
+  background-color: $inverse;
+}
+
+.progress-bar-purple {
+  background-color: $purple;
+}
+
+.progress-bar-pink {
+  background-color: $pink;
+}
+.progress-bar-custom {
+  background-color: $custom;
+}
+
+.progress-animated {
+  -webkit-animation-duration: 5s;
+  -webkit-animation-name: animationProgress;
+  -webkit-transition: 5s all;
+  animation-duration: 5s;
+  animation-name: animationProgress;
+  transition: 5s all;
+}
+
+/* Progressbar Vertical */
+.progress-vertical {
+  min-height: 250px;
+  height: 250px;
+  width: 10px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 20px;
+
+  .progress-bar {
+    width: 100%;
+  }
+}
+.progress-vertical-bottom{
+  min-height: 250px;
+  height: 250px;
+  position: relative;
+  width: 10px;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 20px;
+
+  .progress-bar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.progress-vertical.progress-sm,.progress-vertical-bottom.progress-sm {
+  width: 5px !important;
+  .progress-bar {
+    font-size: 8px;
+    line-height: 5px;
+  }
+}
+
+.progress-vertical.progress-md,.progress-vertical-bottom.progress-md {
+  width: 15px !important;
+  .progress-bar {
+    font-size: 10.8px;
+    line-height: 14.4px;
+  }
+}
+
+.progress-vertical.progress-lg,.progress-vertical-bottom.progress-lg {
+  width: 20px !important;
+  .progress-bar {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,110 @@
+/* =============
+   Profile
+============= */
+
+.profile-detail {
+  text-align: center;
+  padding: 30px 20px;
+
+  img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .status-list {
+    li {
+      padding: 0 20px;
+    }
+  }
+}
+.profile-tabs {
+  li {
+    a{
+      color: $dark !important;
+    }
+  }
+  li.active {
+    a{
+      color: $white !important;
+    }
+  }
+}
+
+.profile-pills {
+  li{
+    a{
+      color: rgba($dark,0.5) !important;
+      padding: 0 10px;
+      line-height: 30px !important;
+
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.comment {
+  padding-top: 12px;
+
+  .comment-avatar {
+    position: relative;
+    -webkit-border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 3px;
+    -moz-background-clip: padding;
+    border-radius: 3px;
+    background-clip: padding-box;
+    display: block;
+    float: left;
+    height: 32px;
+    width: 32px;
+  }
+  .comment-body {
+    float: none;
+    margin-left: 40px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .comment-text {
+    border: 1px solid darken($white,5%);
+    border-radius: 2px;
+    padding: 7px 12px 8px;
+    background-color: darken($white,2%);
+  }
+  .comment-header {
+    font-size: 12px;
+    padding-bottom: 2px;
+
+    a{
+      color: $dark;
+      font-weight: bold;
+    }
+    span {
+      color: $muted;
+      display: inline-block;
+      font-size: 11px;
+      margin-left: 5px;
+    }
+  }
+  .comment-footer {
+    display: block;
+    font-size: 12px;
+    padding: 4px 12px 0;
+
+    i {
+      font-size: 13px;
+      margin-right: 7px;
+    }
+  }
+  .comment-footer, .comment-footer a {
+    color: rgba($dark, 0.5);
+
+    &:hover {
+      color: $custom;
+    }
+  }
+}
+.comment>.comment {
+  margin-left: 32px !important;
+}

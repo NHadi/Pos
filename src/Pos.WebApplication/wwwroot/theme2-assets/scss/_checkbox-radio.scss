@@ -1,0 +1,335 @@
+/* =============
+   Checkbox and Radios
+============= */
+
+
+/* Checkbox */
+
+input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: relative;
+  border: none;
+  margin-bottom: -4px;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+input[type="checkbox"]:focus,
+.checkbox input[type="checkbox"]:focus,
+.checkbox-inline input[type="checkbox"]:focus {
+  outline: none;
+}
+
+input[type="checkbox"]:after,
+.checkbox input[type="checkbox"]:after,
+.checkbox-inline input[type="checkbox"]:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: -2px;
+  margin-right: 5px;
+  border: 2px solid lighten($dark,15%);
+  border-radius: 2px;
+  -webkit-transition: 240ms;
+  -o-transition: 240ms;
+  transition: 240ms;
+}
+
+input[type="checkbox"]:checked:before,
+.checkbox input[type="checkbox"]:checked:before,
+.checkbox-inline input[type="checkbox"]:checked:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 6px;
+  display: table;
+  width: 6px;
+  height: 12px;
+  border: 2px solid $white;
+  border-top-width: 0;
+  border-left-width: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+input[type="checkbox"]:checked:after,
+.checkbox input[type="checkbox"]:checked:after,
+.checkbox-inline input[type="checkbox"]:checked:after {
+  background-color: $custom;
+  border-color: $custom;
+}
+input[type="checkbox"]:disabled {
+  opacity: 0.5;
+}
+input[type="checkbox"]:disabled:after,
+.checkbox input[type="checkbox"]:disabled:after,
+.checkbox-inline input[type="checkbox"]:disabled:after {
+  border-color: $dark;
+}
+input[type="checkbox"]:disabled:checked:after,
+.checkbox input[type="checkbox"]:disabled:checked:after,
+.checkbox-inline input[type="checkbox"]:disabled:checked:after {
+  background-color: $dark;
+  border-color: transparent;
+}
+
+.checkbox.checkbox-circle input[type="checkbox"]:after, .checkbox-inline.checkbox-circle input[type="checkbox"]:after {
+  border-radius: 50%;
+}
+
+.checkbox.checkbox-circle input[type="checkbox"]:checked:before, .checkbox-inline.checkbox-circle input[type="checkbox"]:checked:before {
+  top: 2px;
+  left: 7px;
+  width: 4px;
+  height: 8px;
+}
+
+.checkbox.checkbox-custom input[type="checkbox"]:checked:after,
+.checkbox-inline.checkbox-custom input[type="checkbox"]:checked:after {
+  background-color: $white;
+  border-color: $dark;
+}
+.checkbox.checkbox-custom input[type="checkbox"]:checked:before,
+.checkbox-inline.checkbox-custom input[type="checkbox"]:checked:before {
+  border-color: $dark;
+}
+
+.checkbox.checkbox-primary input[type="checkbox"]:checked:after,
+.checkbox-inline.checkbox-primary input[type="checkbox"]:checked:after {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.checkbox.checkbox-success input[type="checkbox"]:checked:after,
+.checkbox-inline.checkbox-success input[type="checkbox"]:checked:after {
+  background-color: $success;
+  border-color: $success;
+}
+
+.checkbox.checkbox-info input[type="checkbox"]:checked:after,
+.checkbox-inline.checkbox-info input[type="checkbox"]:checked:after {
+  background-color: $info;
+  border-color: $info;
+}
+
+.checkbox.checkbox-warning input[type="checkbox"]:checked:after,
+.checkbox-inline.checkbox-warning input[type="checkbox"]:checked:after {
+  background-color: $warning;
+  border-color: $warning;
+}
+
+.checkbox.checkbox-danger input[type="checkbox"]:checked:after,
+.checkbox-inline.checkbox-danger input[type="checkbox"]:checked:after {
+  background-color: $danger;
+  border-color: $danger;
+}
+
+.checkbox.checkbox-purple input[type="checkbox"]:checked:after,
+.checkbox-inline.checkbox-purple input[type="checkbox"]:checked:after {
+  background-color: $purple;
+  border-color: $purple;
+}
+
+.checkbox.checkbox-pink input[type="checkbox"]:checked:after,
+.checkbox-inline.checkbox-pink input[type="checkbox"]:checked:after {
+  background-color: $pink;
+  border-color: $pink;
+}
+
+.checkbox.checkbox-inverse input[type="checkbox"]:checked:after,
+.checkbox-inline.checkbox-inverse input[type="checkbox"]:checked:after {
+  background-color: $dark;
+  border-color: $dark;
+}
+
+
+/* Radio */
+
+.radio label,
+.radio-inline label,
+.checkbox label,
+.checkbox-inline label {
+  padding-left: 0;
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="radio"],
+.checkbox-inline input[type="radio"],
+.radio input[type="checkbox"],
+.radio-inline input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  margin-left: 0;
+}
+input[type="radio"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+  position: relative;
+  margin-top: 6px;
+  margin-right: 4px;
+  vertical-align: top;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+input[type="radio"]:focus,
+.radio input[type="radio"]:focus,
+.radio-inline input[type="radio"]:focus {
+  outline: none;
+}
+input[type="radio"]:before,
+.radio input[type="radio"]:before,
+.radio-inline input[type="radio"]:before,
+input[type="radio"]:after,
+.radio input[type="radio"]:after,
+.radio-inline input[type="radio"]:after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  -webkit-transition: 240ms;
+  -o-transition: 240ms;
+  transition: 240ms;
+}
+input[type="radio"]:before,
+.radio input[type="radio"]:before,
+.radio-inline input[type="radio"]:before {
+  position: absolute;
+  left: 0;
+  top: -3px;
+  background-color: $dark;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+input[type="radio"]:after,
+.radio input[type="radio"]:after,
+.radio-inline input[type="radio"]:after {
+  position: relative;
+  top: -3px;
+  border: 2px solid lighten($dark,15%);
+}
+input[type="radio"]:checked:before,
+.radio input[type="radio"]:checked:before,
+.radio-inline input[type="radio"]:checked:before {
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+}
+input[type="radio"]:disabled:checked:before,
+.radio input[type="radio"]:disabled:checked:before,
+.radio-inline input[type="radio"]:disabled:checked:before {
+  background-color: lighten($dark,15%);
+}
+input[type="radio"]:checked:after,
+.radio input[type="radio"]:checked:after,
+.radio-inline input[type="radio"]:checked:after {
+  border-color: $dark;
+}
+input[type="radio"]:disabled:after,
+.radio input[type="radio"]:disabled:after,
+.radio-inline input[type="radio"]:disabled:after,
+input[type="radio"]:disabled:checked:after,
+.radio input[type="radio"]:disabled:checked:after,
+.radio-inline input[type="radio"]:disabled:checked:after {
+  border-color: lighten($dark,15%);
+}
+
+
+// Custom radio
+.radio.radio-custom input[type="radio"]:checked:after,
+.radio-inline.radio-custom input[type="radio"]:checked:after {
+  border-color: $custom;
+}
+
+.radio.radio-custom input[type="radio"]:before,
+.radio-inline.radio-custom input[type="radio"]:before {
+  background-color: $custom;
+}
+
+//Primary radio
+.radio.radio-primary input[type="radio"]:checked:after,
+.radio-inline.radio-primary input[type="radio"]:checked:after {
+  border-color: $primary;
+}
+
+.radio.radio-primary input[type="radio"]:before,
+.radio-inline.radio-primary input[type="radio"]:before {
+  background-color: $primary;
+}
+
+
+//Success radio
+.radio.radio-success input[type="radio"]:checked:after,
+.radio-inline.radio-success input[type="radio"]:checked:after {
+  border-color: $success;
+}
+
+.radio.radio-success input[type="radio"]:before,
+.radio-inline.radio-success input[type="radio"]:before {
+  background-color: $success;
+}
+
+//Info radio
+.radio.radio-info input[type="radio"]:checked:after,
+.radio-inline.radio-info input[type="radio"]:checked:after {
+  border-color: $info;
+}
+
+.radio.radio-info input[type="radio"]:before,
+.radio-inline.radio-info input[type="radio"]:before {
+  background-color: $info;
+}
+
+//warning radio
+.radio.radio-warning input[type="radio"]:checked:after,
+.radio-inline.radio-warning input[type="radio"]:checked:after {
+  border-color: $warning;
+}
+
+.radio.radio-warning input[type="radio"]:before,
+.radio-inline.radio-warning input[type="radio"]:before {
+  background-color: $warning;
+}
+
+//Danger radio
+.radio.radio-danger input[type="radio"]:checked:after,
+.radio-inline.radio-danger input[type="radio"]:checked:after {
+  border-color: $danger;
+}
+
+.radio.radio-danger input[type="radio"]:before,
+.radio-inline.radio-danger input[type="radio"]:before {
+  background-color: $danger;
+}
+
+//Purrple radio
+.radio.radio-purple input[type="radio"]:checked:after,
+.radio-inline.radio-purple input[type="radio"]:checked:after {
+  border-color: $purple;
+}
+
+.radio.radio-purple input[type="radio"]:before,
+.radio-inline.radio-purple input[type="radio"]:before {
+  background-color: $purple;
+}
+
+//Pink radio
+.radio.radio-pink input[type="radio"]:checked:after,
+.radio-inline.radio-pink input[type="radio"]:checked:after {
+  border-color: $pink;
+}
+
+.radio.radio-pink input[type="radio"]:before,
+.radio-inline.radio-pink input[type="radio"]:before {
+  background-color: $pink;
+}
+

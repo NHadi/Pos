@@ -1,0 +1,38 @@
+/* =============
+  Task board
+============= */
+
+.taskList {
+  li {
+    background-color: $light-alt;
+    border: 1px solid rgba($muted,0.2);
+    border-left-width: 3px;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  .task-success {
+    border-left-color: $success;
+  }
+  .task-info {
+    border-left-color: $info;
+  }
+  .task-warning {
+    border-left-color: $warning;
+  }
+  .task-danger {
+    border-left-color: $danger;
+  }
+  a {
+    font-size: 13px;
+  }
+  .checkbox {
+    margin-left: 20px;
+  }
+}
+
+.task-placeholder {
+  border: 1px dashed rgba($muted,0.5) !important;
+  background-color: rgba($muted,0.2) !important;
+  padding: 20px;
+}

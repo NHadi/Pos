@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutAuth.cshtml";
+}
+
+<div class="card-box">
+    <div class="panel-heading">
+        <h4 class="text-center"> Sign In to <strong>POS</strong></h4>
+    </div>
+
+    <div class="p-20">
+        <form class="form-horizontal m-t-20" action="/Home">
+
+            <div class="form-group-custom">
+                <input type="text" id="user-name" required="required" />
+                <label class="control-label" for="user-name">Username</label><i class="bar"></i>
+            </div>
+
+            <div class="form-group-custom">
+                <input type="password" id="user-password" required="required" />
+                <label class="control-label" for="user-password">Password</label><i class="bar"></i>
+            </div>
+
+            <div class="form-group ">
+                <div class="col-12">
+                    <div class="checkbox checkbox-primary">
+                        <input id="checkbox-signup" type="checkbox">
+                        <label for="checkbox-signup"> Remember me </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-group text-center m-t-20">
+                <div class="col-12">
+                    <button class="btn btn-purple btn-block text-uppercase waves-effect waves-light" type="submit">
+                        Log In
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group m-t-20 m-b-0">
+                <div class="col-12">
+                    <a href="page-recoverpw.html" class="text-dark"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
+                </div>
+            </div>
+
+            <div class="form-group m-t-40 m-b-0">
+                <div class="col-12 text-center">
+                    <h5 class="font-18"><b>Sign in with</b></h5>
+                </div>
+            </div>
+
+            <div class="form-group m-b-0 text-center">
+                <div class="col-12">
+                    <button type="button" class="btn btn-sm btn-facebook waves-effect waves-light m-t-20">
+                        <i class="fa fa-facebook m-r-5"></i> Facebook
+                    </button>
+
+                    <button type="button" class="btn btn-sm btn-twitter waves-effect waves-light m-t-20">
+                        <i class="fa fa-twitter m-r-5"></i> Twitter
+                    </button>
+
+                    <button type="button" class="btn btn-sm btn-googleplus waves-effect waves-light m-t-20">
+                        <i class="fa fa-google-plus m-r-5"></i> Google+
+                    </button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <p class="text-white">
+            Don't have an account? <a href="page-register.html" class="text-white m-l-5"><b>Sign Up</b></a>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+@(await Component.InvokeAsync("Header"))
+<body>
+
+    <div class="account-pages"></div>
+    <div class="clearfix"></div>
+
+    <div class="wrapper-page">
+        @RenderBody()
+    </div>
+    @(await Component.InvokeAsync("ThemeScripts"))
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

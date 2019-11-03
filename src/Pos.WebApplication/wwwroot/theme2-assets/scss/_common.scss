@@ -1,0 +1,148 @@
+/* =============
+   Common
+============= */
+
+body {
+  background: $body-bg;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: $font-primary;
+  font-size: $body-font-size;
+}
+html {
+  position: relative;
+  min-height: 100%;
+  background: $body-bg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $dark;
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+h1 {
+  line-height: 43px;
+}
+
+h2 {
+  line-height: 35px;
+}
+
+h3 {
+  line-height: 30px;
+  small {
+    color: $lightdark4;
+  }
+}
+
+h4 {
+  line-height: 22px;
+  small {
+    color: $lightdark4;
+  }
+}
+
+h5 {
+  font-size: 15px;
+  small {
+    color: $lightdark4;
+  }
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+* {
+  outline: none !important;
+}
+
+b {
+  font-weight: 500;
+}
+
+a {
+  &:hover {
+    outline: 0;
+    text-decoration: none;
+  }
+  &:active {
+    outline: 0;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  color: #58666e;
+  text-align:left !important;
+  padding: 20px 30px;
+  position: absolute;
+  right: 0;
+  left: 240px;
+  font-size: 13px;
+}
+
+#wrapper {
+  height: $height;
+  overflow: hidden;
+  width: $width;
+}
+
+.page {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* Page titles */
+.page-title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  margin-top: 7px;
+}
+.page-title+.breadcrumb {
+  font-size: 0.9rem;
+}
+
+.page-title-alt {
+  margin-bottom: 23px;
+  margin-top: 10px;
+}
+.page-header {
+  border-bottom: 1px solid #DBDDDE;
+}
+.header-title {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+.social-links {
+  li {
+    a {
+      -webkit-border-radius: 50%;
+      background: #EFF0F4;
+      border-radius: 50%;
+      color: #7A7676;
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      width: 30px;
+    }
+  }
+}

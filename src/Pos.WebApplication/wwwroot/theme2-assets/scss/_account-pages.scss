@@ -1,0 +1,71 @@
+/* =============
+   Accounts pages
+============= */
+
+
+.account-pages {
+  background: url("../images/bg.png");
+  position: absolute;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+.wrapper-page {
+  margin: 5% auto;
+  position: relative;
+  width: 420px;
+
+  .card-box{
+    border: 1px solid rgba(54, 64, 74, 0.1);
+  }
+}
+
+.panel-pages {
+  border-radius: 6px;
+
+  .panel-body {
+    padding: 30px;
+  }
+  .panel-heading {
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+    padding: 40px 20px;
+    position: relative;
+    h3 {
+      position: relative;
+      z-index: 999;
+    }
+  }
+}
+
+.user-thumb {
+  position: relative;
+  z-index: 999;
+  img {
+    height: 88px;
+    margin: 0 auto;
+    width: 88px;
+  }
+}
+
+.ex-page-content {
+  .text-error {
+    color: #252932;
+    font-size: 98px;
+    font-weight: 700;
+    line-height: 150px;
+
+    i {
+      font-size: 78px;
+      padding: 0 10px;
+    }
+  }
+}
+
+/* signup-signin-page */
+
+.signup-signin-page {
+  width: auto;
+}

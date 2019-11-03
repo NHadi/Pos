@@ -1,0 +1,265 @@
+/* =============
+   Helper clasess
+============= */
+
+.p-0 {
+  padding: 0 !important;
+}
+.p-20 {
+  padding: 20px !important;
+}
+.p-30 {
+  padding: 30px !important;
+}
+.p-l-0 {
+  padding-left: 0 !important;
+}
+.p-r-0 {
+  padding-right: 0 !important;
+}
+.p-t-0 {
+  padding-top: 0 !important;
+}
+.p-t-10 {
+  padding-top: 10px !important;
+}
+.p-b-0 {
+  padding-bottom: 0 !important;
+}
+.p-b-10 {
+  padding-bottom: 10px !important;
+}
+.p-l-r-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.m-r-5 {
+  margin-right: 5px !important;
+}
+.m-r-10 {
+  margin-right: 10px !important;
+}
+.m-r-15 {
+  margin-right: 15px !important;
+}
+.m-l-5 {
+  margin-left: 5px !important;
+}
+.m-l-10 {
+  margin-left: 10px !important;
+}
+.m-l-15 {
+  margin-left: 15px !important;
+}
+.m-t-5 {
+  margin-top: 5px !important;
+}
+.m-t-0 {
+  margin-top: 0 !important;
+}
+.m-t-10 {
+  margin-top: 10px !important;
+}
+.m-t-15 {
+  margin-top: 15px !important;
+}
+.m-t-20 {
+  margin-top: 20px !important;
+}
+.m-t-30 {
+  margin-top: 30px !important;
+}
+.m-t-40 {
+  margin-top: 40px !important;
+}
+.m-b-0 {
+  margin-bottom: 0 !important;
+}
+.m-b-5 {
+  margin-bottom: 5px !important;
+}
+.m-b-10 {
+  margin-bottom: 10px !important;
+}
+.m-b-15 {
+  margin-bottom: 15px !important;
+}
+.m-b-20 {
+  margin-bottom: 20px !important;
+}
+.m-b-30 {
+  margin-bottom: 30px !important;
+}
+.w-xs {
+  min-width: 80px;
+}
+.w-sm {
+  min-width: 95px;
+}
+.w-md {
+  min-width: 110px;
+}
+.w-lg {
+  min-width: 140px;
+}
+.m-h-40 {
+  min-height: 40px;
+}
+.m-h-50 {
+  min-height: 50px;
+}
+.l-h-34 {
+  line-height: 34px;
+}
+.font-normal {
+  font-weight: normal;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-13 {
+  font-size: 13px !important;
+}
+.font-16 {
+  font-size: 16px !important;
+}
+.font-18 {
+  font-size: 18px !important;
+}
+.wrapper-md {
+  padding: 20px;
+}
+.pull-in {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.pull-in-card {
+  margin-left: -20px !important;
+  margin-right: -20px !important;
+}
+.b-0 {
+  border: none !important;
+}
+.vertical-middle {
+  vertical-align: middle;
+}
+.b-r-0 {
+  border-radius: 0 !important;
+}
+.bx-shadow {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+.mx-box {
+  max-height: 380px;
+  min-height: 380px;
+}
+.thumb-sm {
+  height: 32px;
+  width: 32px;
+}
+.thumb-md {
+  height: 48px;
+  width: 48px;
+}
+.thumb-lg {
+  height: 88px;
+  width: 88px;
+}
+
+/* =============
+   Extras
+============= */
+/* Table type box */
+
+.table-box {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  .table-detail {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+/* Card Box */
+.card-box{
+  padding: 20px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+  border-radius: 3px;
+  margin-bottom: 30px;
+  background-clip: padding-box;
+  background-color: $white;
+}
+
+/* Grid page */
+.grid-structure {
+  .grid-container {
+    background-color: $lightdark;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+  }
+}
+
+/* Demo only */
+.icon-list-demo {
+  div {
+    cursor: pointer;
+    line-height: 45px;
+    white-space: nowrap;
+    color: #75798B;
+
+    &:hover {
+      color: $white;
+    }
+
+    p{
+      margin-bottom: 0;
+      line-height: inherit;
+    }
+  }
+  i {
+    -webkit-transition: all 0.2s;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    transition: all 0.2s;
+    vertical-align: middle;
+    width: 40px;
+  }
+  .col-md-4 {
+    border-radius:3px;
+    &:hover {
+      background-color: $custom;
+
+      i {
+        -o-transform: scale(2);
+        -webkit-transform: scale(2);
+        -moz-transform: scale(2);
+        transform: scale(2);
+      }
+    }
+  }
+}
+
+//Button Demo
+.button-list {
+  margin-left: -8px;
+  margin-bottom: -12px;
+  .btn {
+    margin-bottom: 12px;
+    margin-left: 8px;
+  }
+}
+
+/* Switchery demo */
+.switchery-demo {
+  .switchery {
+    margin-bottom: 10px;
+  }
+}

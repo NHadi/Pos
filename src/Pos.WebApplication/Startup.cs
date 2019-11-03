@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HealthChecks.UI.Client;
+using HealthChecks.UI.Configuration;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +33,10 @@ namespace Pos.WebApplication
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.InitBootsraper(Configuration)
+                .SetHealtCheck(Configuration);
+
+            services.AddHealthChecksUI();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -51,9 +58,25 @@ namespace Pos.WebApplication
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(                    
+                    name: "areas",
+                    template: "{area:exists}/{controller=Home}/{action=Index}");
+
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Auth}/{action=Index}/{id?}");
+            });
+           
+
+            // HealthCheck middleware
+            app.UseHealthChecks("/hc", new HealthCheckOptions()
+            {
+                Predicate = _ => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            });
+            app.UseHealthChecksUI(delegate (Options options)
+            {
+                options.UIPath = "/hc-ui";
             });
         }
     }

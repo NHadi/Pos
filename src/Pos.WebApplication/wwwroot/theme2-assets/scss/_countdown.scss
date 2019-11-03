@@ -1,0 +1,47 @@
+/* =============
+   Count Down
+============= */
+
+
+.home-wrapper {
+  margin: 10% 0;
+}
+
+.home-text {
+  font-weight: 500;
+}
+
+.u-countdown {
+  margin-top: 40px;
+  text-align: center;
+  color: $white;
+
+  div {
+    display: inline-block;
+    span {
+      display: block;
+      width: 150px;
+      &:first-child {
+        font-size: 3em;
+        font-weight: 500;
+        height: 48px;
+        line-height: 48px;
+      }
+      &:last-child {
+        font-size: 0.9em;
+        height: 25px;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+.u-countdown > * {
+  text-align: center;
+}
+
+.cd-text {
+  font-size: 15px;
+  line-height: 24px;
+  font-style: italic;
+}

@@ -1,0 +1,134 @@
+/* === LOADER === */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f3f3f3;
+  z-index: 9999999;
+}
+#status {
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -23px 0 0 -23px;
+}
+.spinner-wrapper {
+  position: relative;
+  width: 4em;
+  height: 4em;
+  border-radius: 100%;
+}
+.spinner-wrapper::after {
+  content: "";
+  background: #f3f3f3;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+}
+.rotator {
+  position: relative;
+  width: 4em;
+  border-radius: 4em;
+  overflow: hidden;
+  -webkit-animation: rotate 2000ms infinite linear;
+  animation: rotate 2000ms infinite linear;
+}
+.rotator:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f5707a;
+  border: 3px solid #f3f3f3;
+  border-radius: 100%;
+}
+.inner-spin {
+  background: #f3f3f3;
+  height: 4em;
+  width: 2em;
+}
+.inner-spin {
+  -webkit-animation: rotate-left 2500ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation: rotate-left 2500ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  border-radius: 2em 0 0 2em;
+  -webkit-transform-origin: 2em 2em;
+  transform-origin: 2em 2em;
+}
+.inner-spin:last-child {
+  -webkit-animation: rotate-right 2500ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation: rotate-right 2500ms infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  margin-top: -4em;
+  border-radius: 0 2em 2em 0;
+  float: right;
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+}
+@-webkit-keyframes rotate-left {
+  60%,
+  75%,
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-left {
+  60%,
+  75%,
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-right {
+  0%,
+  25%,
+  45% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-right {
+  0%,
+  25%,
+  45% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

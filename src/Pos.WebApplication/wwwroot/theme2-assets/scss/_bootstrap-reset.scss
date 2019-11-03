@@ -1,0 +1,394 @@
+/* =============
+   Bootstrap-custom
+============= */
+.container {
+  width: auto;
+}
+
+.container-alt {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  padding-left: 0;
+
+  a{
+    color: $muted;
+  }
+}
+
+.breadcrumb>li+li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "\f105" !important;
+  font-family: FontAwesome !important;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  padding: 4px 0;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  font-size: $body-font-size;
+  transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  margin-top: 20px!important;
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.show>.dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0 !important;
+}
+
+.dropdown-item.active, .dropdown-item:active{
+  color: $dark;
+  text-decoration: none;
+  background-color: $light;
+}
+
+.dropdown-item {
+  padding: 6px 1.5rem;
+}
+
+.dropdown-lg {
+  width: 260px;
+}
+.arrow-none {
+  &:after {
+    border: none;
+    margin: 0;
+    display: none;
+  }
+}
+
+/* Close Icon */
+.close {
+  opacity: .6;
+}
+
+/* Background colors */
+.bg-custom {
+  background-color: $custom !important;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-success {
+  background-color: $success !important;
+}
+
+.bg-info {
+  background-color: $info !important;
+}
+
+.bg-warning {
+  background-color: $warning !important;
+}
+
+.bg-danger {
+  background-color: $danger !important;
+}
+
+.bg-muted {
+  background-color: $lightdark !important;
+}
+
+.bg-inverse {
+  background-color: $inverse !important;
+}
+
+.bg-purple {
+  background-color: $purple !important;
+}
+
+.bg-pink {
+  background-color: $pink !important;
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-lightdark {
+  background-color: $lightdark !important;
+}
+
+/* Text colors */
+.text-custom {
+  color: $custom !important;
+}
+
+.text-white {
+  color: $white !important;
+}
+
+.text-danger {
+  color: $danger !important;
+}
+
+.text-muted {
+  color: $muted !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.text-warning {
+  color: $warning !important;
+}
+
+.text-success {
+  color: $success !important;
+}
+
+.text-info {
+  color: $info !important;
+}
+
+.text-inverse {
+  color: $inverse !important;
+}
+
+.text-pink {
+  color: $pink !important;
+}
+
+.text-purple {
+  color: $purple !important;
+}
+
+.text-dark {
+  color: $lightdark7 !important;
+}
+
+
+/* Labels */
+.label {
+  display: inline;
+  padding: 0.3em .6em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+.label:empty {
+  display: none;
+}
+
+.label-white {
+  background-color: rgba($white,0.7);
+  color: $dark !important;
+}
+
+.label-default {
+  background-color: $custom;
+}
+
+.label-primary {
+  background-color: $primary;
+}
+
+.label-success {
+  background-color: $success;
+}
+
+.label-info {
+  background-color: $info;
+}
+
+.label-warning {
+  background-color: $warning;
+}
+
+.label-danger {
+  background-color: $danger;
+}
+
+.label-purple {
+  background-color: $purple;
+}
+
+.label-pink {
+  background-color: $pink;
+}
+
+.label-inverse {
+  background-color: $inverse;
+}
+
+.label-muted {
+  background-color: $muted;
+}
+
+
+/* Badge */
+.badge {
+  text-transform: uppercase;
+  padding: 5px 5px 3px 5px;
+  margin-top: 1px;
+  display: inline-block;
+  min-width: 10px;
+  font-weight: 700;
+  line-height: 1;
+  color: $white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+  background-color: $custom;
+}
+
+.badge-xs {
+  font-size: 9px;
+}
+
+.badge-xs, .badge-sm {
+  -webkit-transform: translate(0, -2px);
+  -ms-transform: translate(0, -2px);
+  -o-transform: translate(0, -2px);
+  transform: translate(0, -2px);
+}
+
+.badge-white {
+  background-color: rgba($white,0.7);
+  color: $dark !important;
+}
+
+.badge-primary {
+  background-color: $primary;
+}
+
+.badge-success {
+  background-color: $success;
+}
+
+.badge-info {
+  background-color: $info;
+}
+
+.badge-warning {
+  background-color: $warning;
+}
+
+.badge-danger {
+  background-color: $danger;
+}
+
+.badge-purple {
+  background-color: $purple;
+}
+
+.badge-pink {
+  background-color: $pink;
+}
+
+.badge-inverse {
+  background-color: $inverse;
+}
+
+/* List group */
+
+.list-group-item {
+  border: 1px solid $light5;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color: $custom;
+  border-color: $custom;
+}
+
+
+/* Dropcap */
+.dropcap {
+  font-size: 3.1em;
+}
+
+.dropcap, .dropcap-circle, .dropcap-square {
+  display: block;
+  float: left;
+  font-weight: 400;
+  line-height: 36px;
+  margin-right: 6px;
+  text-shadow: none;
+}
+
+/* Tooltips */
+
+.tooltip-inner {
+  border-radius: 1px;
+  padding: 6px 10px;
+}
+.jqstooltip {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: auto!important;
+  height: auto!important;
+}
+
+
+/* Popover */
+
+.popover {
+  font-family: inherit;
+  border-radius: 3px;
+
+  .popover-title {
+    background-color: transparent;
+    color: $custom;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+/* Code */
+code {
+  color: $primary;
+  background-color: $lightdark;
+  border-radius: 4px;
+}
+
+/* Pre */
+pre{
+  background-color: $lightdark;
+  border: 1px solid #D4D8DA
+}
+
+/* Media */
+.media {
+  margin-bottom: 20px;
+
+  .media-heading {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+.media:last-of-type {
+  margin-bottom: 0;
+}
+
+
+
+.badge,.btn,.label,.nav-user img,.contacts-list .avatar img,.morris-hover.morris-default-style,
+.conversation-list .chat-avatar img,.alert{
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}

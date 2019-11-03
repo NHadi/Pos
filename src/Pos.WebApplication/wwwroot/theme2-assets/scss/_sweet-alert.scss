@@ -1,0 +1,89 @@
+/* =========== */
+/* Sweet Alert */
+/* =========== */
+
+.sweet-alert {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  border-radius: 3px;
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .icon.success  {
+    .placeholder {
+      border: 4px solid rgba($success,0.3);
+    }
+    .line {
+      background-color: $success;
+    }
+  }
+  .icon.warning {
+    border-color: $warning;
+  }
+  .icon.info {
+    border-color: $info;
+  }
+  .btn-warning:focus,.btn-info:focus,.btn-success:focus,.btn-danger:focus,.btn-default:focus {
+    box-shadow: none;
+  }
+  .btn-lg {
+    font-size: 15px !important;
+  }
+}
+
+/* =========== */
+/* Sweet Alert 2*/
+/* =========== */
+
+.swal2-modal {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  border-radius: 3px;
+
+  .swal2-title {
+    font-size: 28px;
+  }
+  .swal2-content {
+    font-size: 16px;
+  }
+  .swal2-spacer {
+    margin: 10px 0;
+  }
+  .swal2-file, .swal2-input, .swal2-textarea {
+    border: 2px solid $muted;
+    font-size: 16px;
+    box-shadow: none !important;
+  }
+}
+
+.swal2-icon.swal2-question {
+  color: $custom;
+  border-color: $custom;
+}
+
+.swal2-icon.swal2-success {
+  border-color: $success;
+
+  .line {
+    background-color: $success;
+  }
+
+  .placeholder {
+    border-color: $success;
+  }
+}
+
+.swal2-icon.swal2-warning {
+  color: $warning;
+  border-color: $warning;
+}
+
+.swal2-icon.swal2-error {
+  border-color: $danger;
+  .line {
+    background-color: $danger;
+  }
+}
+.swal2-modal .swal2-file:focus, .swal2-modal .swal2-input:focus, .swal2-modal .swal2-textarea:focus {
+  outline: 0;
+  border: 2px solid $custom;
+}

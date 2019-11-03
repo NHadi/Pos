@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Pos.WebApplication.Models.MenuItem>
+
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+                <li class="text-muted menu-title">Navigation</li>
+                @foreach (var menuItem in Model.Where(x => !x.Parent.HasValue).OrderBy(x => x.Position))
+                {
+                    var url = menuItem.Url;                   
+
+                    var hasParent = Model.Where(x => x.Parent == menuItem.Id);
+
+                    if (hasParent.Any())
+                    {
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="@menuItem.Icon"></i> <span> @menuItem.Title </span> <span class="menu-arrow"></span></a>
+                            <ul class="list-unstyled">
+                                @foreach (var subMenu in hasParent.OrderBy(x => x.Position))
+                                {                                    
+                                    <li><a href="@url">@subMenu.Title</a></li>
+                                }
+
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+
+                        <li>
+                            <a href="@url" class="waves-effect"><i class="@menuItem.Icon"></i> <span> @menuItem.Title </span></a>
+                        </li>
+                    }
+                }
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+
+<!-- Left Sidebar End -->

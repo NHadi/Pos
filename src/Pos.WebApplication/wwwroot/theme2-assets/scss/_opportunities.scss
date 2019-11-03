@@ -1,0 +1,34 @@
+/* =============
+  Opportunities
+============= */
+
+
+.opport-box {
+  .checkbx-detail {
+    width: 30px;
+  }
+  .lable-detail {
+    text-align: center;
+    width: 20%;
+  }
+  .member-info {
+    padding-right: 10px;
+
+    h4{
+      font-size: 16px;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    p{
+      font-size: 13px;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+}

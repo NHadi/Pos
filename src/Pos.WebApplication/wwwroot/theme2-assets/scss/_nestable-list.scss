@@ -1,0 +1,68 @@
+/* =============
+   Nestable
+============= */
+
+
+.custom-dd {
+  .dd-list {
+    .dd-item {
+      .dd-handle {
+        background: darken($white,5%);
+        border: none;
+        padding: 10px 16px;
+        height: auto;
+        font-weight: 500;
+        border-radius: 3px;
+
+        &:hover {
+          color: $custom;
+        }
+      }
+
+      button {
+        height: auto;
+        font-size: 17px;
+        margin: 8px auto;
+        color: $lightdark5;
+        width: 30px;
+      }
+    }
+  }
+}
+
+.custom-dd-empty {
+  .dd-list {
+    .dd3-handle {
+      border: none;
+      background: darken($white,5%);
+      height: 36px;
+      width: 36px;
+
+      &:before {
+        color: inherit;
+        top: 7px;
+      }
+
+      &:hover {
+        color: $custom;
+      }
+    }
+    .dd3-content {
+      height: auto;
+      border: none;
+      padding: 10px 16px 10px 46px;
+      background: darken($white,5%);
+      font-weight: 500;
+
+      &:hover {
+        color: $custom;
+      }
+    }
+    button {
+      width: 26px;
+      height: 26px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}

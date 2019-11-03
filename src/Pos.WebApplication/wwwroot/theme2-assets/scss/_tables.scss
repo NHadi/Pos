@@ -1,0 +1,396 @@
+/* =============
+   Tables
+============= */
+
+.table {
+  margin-bottom: 10px;
+}
+
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid $light5;
+  font-weight: 500;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+table.focus-on {
+  tbody {
+    tr.focused {
+      th {
+        background-color: $custom;
+        color: $white;
+      }
+      td {
+        background-color: $custom;
+        color: $white;
+      }
+    }
+  }
+}
+
+.fixed-table-container tbody .selected td {
+  background-color: darken($white,3%);
+}
+
+.modal-block {
+  background: transparent;
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 0;
+  position: relative;
+  text-align: left;
+}
+
+
+/* Data table */
+#datatable-editable {
+  .actions {
+    a {
+      padding: 5px;
+    }
+  }
+  .form-control {
+    background-color: $white;
+    width: 100%;
+  }
+  .fa-trash-o {
+    color: $danger;
+  }
+  .fa-times {
+    color: $danger;
+  }
+  .fa-pencil {
+    color: #29b6f6;
+  }
+  .fa-save {
+    color: #33b86c;
+  }
+}
+
+#datatable {
+  td {
+    font-weight: normal;
+  }
+}
+
+div.dataTables_paginate {
+  ul.pagination {
+    margin-top: 30px;
+  }
+}
+
+div.dataTables_info {
+  padding-top: 38px;
+}
+
+.dt-buttons {
+  float: left;
+}
+
+.dt-button-collection.dropdown-menu {
+  visibility: inherit;
+  opacity: 1;
+  display: none;
+  margin: 0 !important;
+}
+
+div#datatable-buttons_info {
+  float: left;
+}
+
+#datatable-editable .form-control {
+  background-color: $white;
+  width: auto;
+  height: 20px;
+}
+
+/* Footable */
+.footable-odd {
+  background-color: $white;
+}
+.footable-detail-show {
+  background-color: darken($white,5%);
+}
+.footable-row-detail {
+  background-color: #F0F4F7;
+}
+.footable-pagination {
+  li {
+    margin-left: 5px;
+    display: inline-block;
+    float: left;
+
+    a{
+      position: relative;
+      display: block;
+      padding: .5rem .75rem;
+      margin-left: -1px;
+      line-height: 1.25;
+      color: $dark;
+      background-color: $white;
+      border: 1px solid $light;
+    }
+  }
+  li.active {
+    a {
+      color: $white;
+    }
+  }
+}
+
+/* Bootstrap Table */
+.fixed-table-pagination .pagination-detail, .fixed-table-pagination div.pagination {
+  margin-top: 20px;
+}
+
+.fixed-table-container {
+  border: 1px solid darken($white,5%) !important;
+}
+.bootstrap-table .table>thead>tr>th {
+  border-bottom: 2px solid darken($white,5%);
+  background: darken($white,5%);
+}
+.fixed-table-container thead th .th-inner {
+  padding: 9px 12px;
+}
+.bootstrap-table .table, .bootstrap-table .table>tbody>tr>td, .bootstrap-table .table>tbody>tr>th, .bootstrap-table .table>tfoot>tr>td, .bootstrap-table .table>tfoot>tr>th, .bootstrap-table .table>thead>tr>td {
+  padding: 8px 12px !important;
+}
+
+.fixed-table-pagination {
+  .pagination a {
+    display: block;
+    border-radius: 3px;
+  }
+  .page-number.active {
+    a {
+      color: $white;
+    }
+  }
+  .page-list {
+    .dropdown-menu {
+      a {
+        color: $dark;
+        display: block;
+      }
+    }
+  }
+}
+
+/* Tablesaw */
+.tablesaw thead {
+  background: darken($white,5%);
+  background-image: none;
+  border: none;
+}
+.tablesaw thead th {
+  text-shadow: none;
+  letter-spacing: 0.06em;
+}
+.tablesaw thead tr:first-child th {
+  padding-top: 1.1em;
+  padding-bottom: 0.9em;
+}
+.tablesaw thead tr:first-child th {
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+}
+.tablesaw td, .tablesaw tbody th {
+  font-size: inherit;
+  line-height: inherit;
+  padding: 10px !important;
+}
+.tablesaw-stack tbody tr ,.tablesaw tbody tr{
+  border-bottom: none;
+}
+.tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending button:after, .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-descending button:after {
+  font-family: FontAwesome;
+  font-size: 10px;
+}
+.tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending button:after {
+  content: "\f176";
+}
+.tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-descending button:after {
+  content: "\f175";
+}
+.tablesaw-bar .btn-select.btn-small:after, .tablesaw-bar .btn-select.btn-micro:after {
+  font-size: 8px;
+  padding-right: 10px;
+}
+.tablesaw-swipe .tablesaw-cell-persist {
+  box-shadow: none;
+}
+.tablesaw-enhanced .tablesaw-bar .btn {
+  text-shadow: none;
+  background-image: none;
+}
+.tablesaw-enhanced .tablesaw-bar .btn.btn-select {
+  &:hover {
+    background: $white;
+  }
+}
+.tablesaw-enhanced .tablesaw-bar .btn:hover, .tablesaw-enhanced .tablesaw-bar .btn:focus,.tablesaw-enhanced .tablesaw-bar .btn:active {
+  color: $custom !important;
+  background-color: $light5;
+  outline: none !important;
+  box-shadow: none !important;
+  background-image: none;
+}
+
+.tablesaw-columntoggle-popup {
+  .btn-group {
+    display: block;
+  }
+}
+
+/* Fixed table */
+.sticky-table-header {
+  top: 70px !important;
+}
+
+.table-wrapper {
+  .btn-toolbar {
+    display: block;
+  }
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+
+/* Key Table */
+table.dataTable th.focus,table.dataTable td.focus{outline:3px solid $custom !important;outline-offset:-1px}
+
+/* ColVid Tables */
+div.ColVis {
+  float: none;
+  margin-right: 30px;
+}
+button.ColVis_Button,.ColVis_Button:hover {
+  float: none;
+  border-radius: 3px;
+  outline: none !important;
+  background: none;
+  box-shadow: none;
+  color: $white !important;
+  background-color: $custom !important;
+  border: 1px solid $custom !important;
+}
+.dataTables_length {
+  float: left;
+}
+div.ColVis_collectionBackground {
+  background-color: transparent;
+}
+ul.ColVis_collection {
+  padding: 10px 0 0 0;
+  background-color: $white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border: none;
+
+  li{
+    background: transparent !important;
+    padding: 3px 10px !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+#datatable-colvid_info {
+  float: left;
+}
+
+
+/* JsGrid table */
+.jsgrid-cell {
+  padding: .8em;
+}
+
+.jsgrid-selected-row > .jsgrid-cell {
+  background: darken($light-alt,3%);
+  border-color: darken($light-alt,5%);
+
+  .jsgrid-button {
+    background-color: rgba($dark,0.1);
+  }
+
+}
+
+.jsgrid-edit-row > .jsgrid-cell,.jsgrid-insert-row>.jsgrid-cell {
+  background: darken($light-alt, 3%);
+
+  .jsgrid-button {
+    background-color: rgba($dark,0.1);
+  }
+}
+
+.jsgrid input, .jsgrid select, .jsgrid textarea {
+  border: 1px solid darken($light-alt,10%);
+  padding: .4em .6em;
+}
+
+.jsgrid-pager-container {
+  margin-top: 10px;
+}
+.jsgrid-pager-page {
+  padding: 0;
+  margin: 0 2px;
+}
+.jsgrid-pager-page a,.jsgrid-pager-current-page{
+  background-color: #eee;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  color: $lightdark7;
+}
+.jsgrid-pager-page.jsgrid-pager-current-page {
+  background-color: $custom;
+  color: $white;
+}
+
+.jsgrid-pager-nav-button {
+  a{
+    color: $lightdark7;
+    font-weight: 500;
+
+    &:hover {
+      color: $custom;
+    }
+  }
+}
+
+.jsgrid .jsgrid-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-image: url("../images/download.png");
+  background-color: #eee;
+
+  &:hover {
+    opacity: 0.9;
+    background-color: rgba($dark,0.2);
+  }
+}
+
+.jsgrid-search-mode-button {
+  background-position: 0 -295px;
+}
+.jsgrid-insert-button {
+  background-position: 0 -160px;
+}
+
+.jsgrid-header-sort:before {
+  position: absolute;
+}
+.jsgrid-header-cell {
+  text-align: center !important;
+}

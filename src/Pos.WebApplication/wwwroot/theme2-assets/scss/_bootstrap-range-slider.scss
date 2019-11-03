@@ -1,0 +1,90 @@
+/* =============
+   Bootstrap Range slider
+============= */
+
+.slider{
+  .slider-horizontal {
+    margin: 10px 0;
+  }
+  .slider-vertical {
+    margin: 0 10px;
+  }
+}
+.slider-handle.round {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #EFF2F7;
+  background: #fff;
+  cursor: pointer;
+}
+.slider-default {
+  .slider-selection {
+    background-image: none;
+    background-color: #909aa0;
+  }
+}
+
+.slider-primary {
+  .slider-selection {
+    background-image: none;
+    background-color: $primary;
+  }
+}
+
+.slider-success {
+  .slider-selection {
+    background-image: none;
+    background-color: $success;
+  }
+}
+
+.slider-info {
+  .slider-selection {
+    background-image: none;
+    background-color: $info;
+  }
+}
+
+.slider-warning {
+  .slider-selection {
+    background-image: none;
+    background-color: $warning;
+  }
+}
+
+.slider-danger {
+  .slider-selection {
+    background-image: none;
+    background-color: $danger;
+  }
+}
+
+
+.slider-custom {
+  .slider-selection {
+    background-image: none;
+    background-color: $custom;
+  }
+}
+
+.slider-pink {
+  .slider-selection {
+    background-image: none;
+    background-color: $pink;
+  }
+}
+
+.slider-purple {
+  .slider-selection {
+    background-image: none;
+    background-color: $purple;
+  }
+}
+
+.slider-inverse {
+  .slider-selection {
+    background-image: none;
+    background-color: $inverse;
+  }
+}

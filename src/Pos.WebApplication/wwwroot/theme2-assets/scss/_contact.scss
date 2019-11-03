@@ -1,0 +1,50 @@
+/* =============
+  Contact
+============= */
+
+.contact-search {
+  .btn-white {
+    position: absolute;
+    top: 1px;
+    right: 16px;
+    background-color: transparent !important;
+    border: none !important;
+    font-size: 16px;
+    box-shadow: none !important;
+    outline: none !important;
+    color: $muted;
+  }
+}
+
+.contact-card {
+  position: relative;
+
+  &:hover {
+    .contact-action {
+      display: block;
+    }
+  }
+
+  img{
+    width: 80px;
+    height: 80px;
+  }
+  .member-info {
+    padding-left: 100px;
+    padding-bottom: 20px;
+
+    h4,p{
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      white-space: nowrap;
+    }
+  }
+  .contact-action {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+  }
+}

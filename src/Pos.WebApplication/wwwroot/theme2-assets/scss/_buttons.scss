@@ -1,0 +1,272 @@
+/* =============
+   Buttons
+============= */
+.btn {
+  border-radius: 2px;
+  outline: none !important;
+  font-family: $font-primary;
+  font-size: 15px;
+
+  &:hover{
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  }
+}
+
+.btn-md {
+  padding: 8px 16px;
+}
+
+.btn-primary, .btn-success,.btn-default, .btn-info, .btn-warning, .btn-danger, .btn-inverse, .btn-purple, .btn-pink {
+  color: $white !important;
+}
+.btn-default, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
+  background-color: $custom !important;
+  border: 1px solid $custom !important;
+}
+.btn-white, .btn-white:hover, .btn-white:focus, .btn-white:active, .btn-white.active, .btn-white.focus, .btn-white:active, .btn-white:focus, .btn-white:hover, .open > .dropdown-toggle.btn-white {
+  border: 1px solid #eaeaea !important;
+  background-color: $white;
+  color: $inverse !important;
+
+  &:hover {
+    background-color: $light9;
+  }
+  &:focus {
+    background-color: $light9;
+  }
+  &:active {
+    background-color: $light9;
+  }
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary {
+  background-color: $primary !important;
+  border: 1px solid $primary !important;
+}
+
+.btn-success, .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open > .dropdown-toggle.btn-success {
+  background-color: $success !important;
+  border: 1px solid $success !important;
+}
+
+.btn-info, .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.focus, .btn-info:active, .btn-info:focus, .btn-info:hover, .open > .dropdown-toggle.btn-info {
+  background-color: $info !important;
+  border: 1px solid $info !important;
+}
+
+.btn-warning, .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.focus, .btn-warning:active, .btn-warning:focus, .btn-warning:hover, .open > .dropdown-toggle.btn-warning {
+  background-color: $warning !important;
+  border: 1px solid $warning !important;
+}
+
+.btn-danger, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .btn-danger.active, .btn-danger.focus, .btn-danger:active, .btn-danger:focus, .btn-danger:hover, .open > .dropdown-toggle.btn-danger {
+  background-color: $danger !important;
+  border: 1px solid $danger !important;
+}
+
+.btn-inverse, .btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active, .btn-inverse.focus, .btn-inverse:active, .btn-inverse:focus, .btn-inverse:hover, .open > .dropdown-toggle.btn-inverse {
+  background-color: $inverse !important;
+  border: 1px solid $inverse !important;
+  color: $white;
+}
+.btn-inverse.focus, .btn-inverse:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba($inverse,.5);
+  box-shadow: 0 0 0 2px rgba($inverse,.5);
+}
+.btn-purple, .btn-purple:hover, .btn-purple:focus, .btn-purple:active {
+  background-color: $purple !important;
+  border: 1px solid $purple !important;
+  color: $white;
+}
+.btn-purple.focus, .btn-purple:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba($purple,.5);
+  box-shadow: 0 0 0 2px rgba($purple,.5);
+}
+.btn-pink, .btn-pink:hover, .btn-pink:focus, .btn-pink:active {
+  background-color: $pink !important;
+  border: 1px solid $pink !important;
+  color: $white;
+}
+.btn-pink.focus, .btn-pink:focus {
+  -webkit-box-shadow: 0 0 0 2px rgba($pink,.5);
+  box-shadow: 0 0 0 2px rgba($pink,.5);
+}
+.open > .dropdown-toggle.btn-primary.btn-custom ,
+.open > .dropdown-toggle.btn-success.btn-custom ,
+.open > .dropdown-toggle.btn-info.btn-custom ,
+.open > .dropdown-toggle.btn-warning.btn-custom ,
+.open > .dropdown-toggle.btn-danger.btn-custom ,
+.open > .dropdown-toggle.btn-default.btn-custom {
+  border-width: 2px !important;
+  color: $white !important;
+}
+.open > .dropdown-toggle.btn-white.btn-custom {
+  border-width: 2px !important;
+}
+.btn-custom.btn-default {
+  color: $custom !important;
+}
+
+.btn-custom.btn-primary {
+  color: $primary !important;
+}
+
+.btn-custom.btn-success {
+  color: $success !important;
+}
+
+.btn-custom.btn-info {
+  color: $info !important;
+}
+
+.btn-custom.btn-warning {
+  color: $warning !important;
+}
+
+.btn-custom.btn-danger {
+  color: $danger !important;
+}
+
+.btn-custom.btn-inverse {
+  color: $inverse !important;
+}
+
+.btn-custom.btn-purple {
+  color: $purple !important;
+}
+.btn-custom.btn-white {
+  color: $inverse !important;
+
+  &:hover,&:focus,&:active {
+    color: $inverse !important;
+    background-color: $lightdark !important;
+  }
+}
+
+.btn-custom.btn-pink {
+  color: $pink !important;
+}
+
+.btn-rounded {
+  border-radius: 2em !important;
+  padding: 6px 20px;
+
+  .btn-label {
+    padding: 7px 15px 7px 20px;
+    margin-left: -20px;
+  }
+  .btn-label-right{
+    margin-right: -20px;
+    margin-left: 12px;
+  }
+}
+
+.btn-custom {
+  -moz-border-radius: 2px;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  -webkit-border-radius: 2px;
+  -webkit-transition: all 400ms ease-in-out;
+  background-color: transparent !important;
+  border-radius: 3px;
+  transition: all 400ms ease-in-out;
+  background-clip: inherit;
+  &:hover {
+    color: $white !important;
+  }
+  &:focus {
+    color: $white !important;
+  }
+}
+
+.btn-label {
+  background: rgba(0, 0, 0, 0.05);
+  display: inline-block;
+  padding: 7px 15px;
+  border-radius: 3px 0 0 3px;
+  margin: -7px -13px;
+  margin-right: 12px;
+}
+.btn-label-right {
+  margin-left: 12px;
+  margin-right: -13px;
+  border-radius: 0px 3px 3px 0px;
+}
+
+.btn-group.open .dropdown-toggle {
+  box-shadow: none;
+}
+
+/* File Upload */
+
+.fileupload {
+  overflow: hidden;
+  position: relative;
+  input.upload {
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    font-size: 20px;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* Social Buttons */
+
+.btn-facebook {
+  color: $white !important;
+  background-color: #3b5998 !important;
+}
+.btn-twitter {
+  color: $white !important;
+  background-color: #00aced !important;
+}
+.btn-linkedin {
+  color: $white !important;
+  background-color: #007bb6 !important;
+}
+.btn-dribbble {
+  color: $white !important;
+  background-color: #ea4c89 !important;
+}
+.btn-googleplus {
+  color: $white !important;
+  background-color: #dd4b39 !important;
+}
+.btn-instagram  {
+  color: $white !important;
+  background-color: #517fa4 !important;
+}
+.btn-pinterest  {
+  color: $white !important;
+  background-color: #cb2027 !important;
+}
+.btn-dropbox  {
+  color: $white !important;
+  background-color: #007ee5 !important;
+}
+.btn-flickr  {
+  color: $white !important;
+  background-color: #ff0084 !important;
+}
+.btn-tumblr  {
+  color: $white !important;
+  background-color: #32506d !important;
+}
+.btn-skype {
+  color: $white !important;
+  background-color: #00aff0 !important;
+}
+.btn-youtube  {
+  color: $white !important;
+  background-color: #bb0000 !important;
+}
+.btn-github  {
+  color: $white !important;
+  background-color: #171515 !important;
+}
