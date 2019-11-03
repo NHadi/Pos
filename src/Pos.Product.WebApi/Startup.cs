@@ -24,6 +24,11 @@ namespace Pos.Product.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.InitBootsraper(Configuration)
+                .InitAppServices()
+                .InitEventHandlers()
+                .InitMapperProfile();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -34,6 +39,9 @@ namespace Pos.Product.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseMvc();
         }

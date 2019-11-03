@@ -8,7 +8,7 @@ namespace Pos.Product.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ProductCategoryController : ControllerBase
     {
         // GET api/values
         [HttpGet]

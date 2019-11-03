@@ -1,18 +1,17 @@
-﻿using Dermayon.Common.Events;
+﻿using Dermayon.Common.Domain;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Pos.Product.Domain.Events
+namespace Pos.Product.WebApi.Application.Commands
 {
-    [Event("ProductCreated")]
-    public class ProductCreatedEvent : IEvent
+    public class CreateProductCommand : ICommand
     {
         public Guid Category { get; set; }
         public string PartNumber { get; set; }
         public string Name { get; set; }
         public int? Quantity { get; set; }
         public decimal? UnitPrice { get; set; }
-        public DateTime CreatedAt { get; set; }
     }
 }
