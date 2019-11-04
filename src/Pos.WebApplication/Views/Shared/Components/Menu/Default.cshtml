@@ -8,7 +8,7 @@
                 <li class="text-muted menu-title">Navigation</li>
                 @foreach (var menuItem in Model.Where(x => !x.Parent.HasValue).OrderBy(x => x.Position))
                 {
-                    var url = menuItem.Url;                   
+                    var url = menuItem.Url;
 
                     var hasParent = Model.Where(x => x.Parent == menuItem.Id);
 
@@ -18,8 +18,8 @@
                             <a href="javascript:void(0);" class="waves-effect"><i class="@menuItem.Icon"></i> <span> @menuItem.Title </span> <span class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
                                 @foreach (var subMenu in hasParent.OrderBy(x => x.Position))
-                                {                                    
-                                    <li><a href="@url">@subMenu.Title</a></li>
+                                {
+                                    <li><a href="@subMenu.Url">@subMenu.Title</a></li>
                                 }
 
                             </ul>

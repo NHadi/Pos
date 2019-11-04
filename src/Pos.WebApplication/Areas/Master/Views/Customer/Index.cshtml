@@ -1,0 +1,209 @@
+﻿
+@{
+    ViewData["Title"] = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="~/theme2-assets/plugins/morris/morris.css">
+    <link href="~/theme2-assets/plugins/bootstrap-table/css/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+}
+
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-header-box">
+            <ol class="breadcrumb pull-right mb-0">
+                <li class="breadcrumb-item"><a href="#">Pos</a></li>
+                <li class="breadcrumb-item"><a href="#">Master</a></li>
+                <li class="breadcrumb-item active">Customer</li>
+            </ol>
+            <h4 class="page-title">Customer</h4>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>
+
+
+<!--Basic Toolbar-->
+<!--===================================================-->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">            
+            <button class="btn btn-warning waves-effect waves-light"> <i class="fa fa-plus-circle"></i> <span>Insert</span> </button>
+            <div class="fileupload btn btn-purple waves-effect waves-light">
+                <span><i class="ion-upload m-r-5"></i>Import</span>
+                <input type="file" class="upload">
+            </div>
+            <button class="btn btn-dark waves-effect waves-light"> <i class="fa fa-file-o"></i> <span>Export</span> </button>
+        </div>
+    </div>
+</div>
+<div class="row">   
+    <div class="col-sm-12">
+        <div class="card-box">
+            <h4 class="m-t-0 header-title"><b>Basic Toolbar</b></h4>
+            <p class="text-muted font-13">
+                Example of Basic Toolbar (Your text goes here).
+            </p>
+
+            <table data-toggle="table"
+                   data-search="true"
+                   data-show-refresh="true"
+                   data-show-toggle="true"
+                   data-show-columns="true"
+                   data-sort-name="id"
+                   data-page-list="[5, 10, 20]"
+                   data-page-size="5"
+                   data-pagination="true" data-show-pagination-switch="true" class="table-bordered ">
+                <thead>
+                    <tr>
+                        <th data-field="id" data-sortable="true" data-formatter="invoiceFormatter">Order ID</th>
+                        <th data-field="name" data-sortable="true">Name</th>
+                        <th data-field="date" data-sortable="true" data-formatter="dateFormatter">Order Date</th>
+                        <th data-field="amount" data-align="center" data-sortable="true" data-sorter="priceSorter">Price</th>
+                        <th data-field="status" data-align="center" data-sortable="true" data-formatter="statusFormatter">Status</th>
+
+                    </tr>
+                </thead>
+
+
+                <tbody>
+                    <tr>
+                        <td>UB-1609</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Unpaid</td>
+                    </tr>
+                    <tr>
+                        <td>UB-1610</td>
+                        <td>Woldt</td>
+                        <td>24 Jun 2015</td>
+                        <td>$ 15.00</td>
+                        <td>Paid</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1611</td>
+                        <td>Leonardo</td>
+                        <td>25 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Shipped</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1612</td>
+                        <td>Halladay</td>
+                        <td>27 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Refunded</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1613</td>
+                        <td>Badgett</td>
+                        <td>28 Jun 2015</td>
+                        <td>$ 95.00</td>
+                        <td>Unpaid</td>
+                    </tr>
+                    <tr>
+                        <td>UB-1614</td>
+                        <td>Boudreaux</td>
+                        <td>29 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Paid</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1615</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Shipped</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1616</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Refunded</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1617</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Unpaid</td>
+                    </tr>
+                    <tr>
+                        <td>UB-1618</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Paid</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1619</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Shipped</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1620</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Refunded</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1621</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Unpaid</td>
+                    </tr>
+                    <tr>
+                        <td>UB-1622</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Paid</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1623</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Shipped</td>
+                    </tr>
+
+                    <tr>
+                        <td>UB-1624</td>
+                        <td>Boudreaux</td>
+                        <td>22 Jun 2015</td>
+                        <td>$ 35.00</td>
+                        <td>Refunded</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <!-- Bootsrap table js -->
+    <script src="~/theme2-assets/plugins/bootstrap-table/js/bootstrap-table.js"></script>
+    <script src="~/theme2-assets/pages/jquery.bs-table.js"></script>
+}

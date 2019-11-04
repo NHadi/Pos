@@ -14,13 +14,11 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <Folder Include="Areas\Master\" />
-    <Folder Include="Areas\Report\" />
-    <Folder Include="Areas\Order\" />
     <Folder Include="Views\Shared\Components\Header\" />
     <Folder Include="Views\Shared\Components\Menu\" />
     <Folder Include="Views\Shared\Components\RightSidebar\" />
