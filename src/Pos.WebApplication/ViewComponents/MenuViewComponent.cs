@@ -18,8 +18,8 @@ namespace Pos.WebApplication.ViewComponents
             {
                 new MenuItem { Id = Guid.NewGuid(), Position = 1, Title = "Dashboard", Url = "/Home", Icon = "md md-dashboard" },
                 new MenuItem { Id = Guid.NewGuid(), Position = 2, Title = "Master", Url = "/Master", Icon = "md md-group" },
-                new MenuItem { Id = Guid.NewGuid(), Position = 3, Title = "Order", Url = "/Order/Item", Icon = "md md-account-child" },
-                new MenuItem { Id = Guid.NewGuid(), Position = 4, Title = "Report", Url = "/Report/Transaction", Icon = "md md-av-timer" },                
+                new MenuItem { Id = Guid.NewGuid(), Position = 3, Title = "Order", Url = "/Order/Item", Icon = "md md-shopping-cart" },
+                new MenuItem { Id = Guid.NewGuid(), Position = 4, Title = "Report", Url = "/Reports/Transaction", Icon = "md md-today" },                
             };
 
             _menus.Add(new MenuItem { Id = Guid.NewGuid(), Position = 1, Title = "Product", Url = "/Master/Product", Icon = "md md-account-child", Parent = _menus.Where(x => x.Title.Contains("Master")).SingleOrDefault().Id });
