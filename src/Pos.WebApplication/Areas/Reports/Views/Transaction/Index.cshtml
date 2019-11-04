@@ -1,0 +1,357 @@
+﻿
+@{
+    ViewData["Title"] = "Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="~/theme2-assets/plugins/morris/morris.css">
+}
+
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-header-box">
+            <ol class="breadcrumb pull-right mb-0">
+                <li class="breadcrumb-item"><a href="#">Pos</a></li>
+                <li class="breadcrumb-item"><a href="#">Reports</a></li>
+                <li class="breadcrumb-item active">Transaction</li>
+            </ol>
+            <h4 class="page-title">Transaction</h4>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-xl-3">
+        <div class="card-box widget-box-1 bg-white">
+            <i class="fa fa-info-circle text-muted pull-right inform" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Last 24 Hours"></i>
+            <h4 class="text-dark font-18">Income status</h4>
+            <h2 class="text-primary text-center">$<span data-plugin="counterup">5623</span></h2>
+            <p class="text-muted">Total income: $22506 <span class="pull-right"><i class="fa fa-caret-up text-primary m-r-5"></i>10.25%</span></p>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-xl-3">
+        <div class="card-box widget-box-1 bg-white">
+            <i class="fa fa-info-circle text-muted pull-right inform" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Last 24 Hours"></i>
+            <h4 class="text-dark font-18">Sales status</h4>
+            <h2 class="text-pink text-center"><span data-plugin="counterup">185</span></h2>
+            <p class="text-muted">Total sales: 2398 <span class="pull-right"><i class="fa fa-caret-down text-danger m-r-5"></i>7.85%</span></p>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-xl-3">
+        <div class="card-box widget-box-1 bg-white">
+            <i class="fa fa-info-circle text-muted pull-right inform" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Last 24 Hours"></i>
+            <h4 class="text-dark font-18">Income status</h4>
+            <h2 class="text-success text-center">$<span data-plugin="counterup">9562</span></h2>
+            <p class="text-muted">Total income: $22506 <span class="pull-right"><i class="fa fa-caret-up text-primary m-r-5"></i>10.25%</span></p>
+        </div>
+    </div>
+
+    <div class="col-lg-12 col-xl-3">
+        <div class="card-box widget-box-1 bg-white">
+            <i class="fa fa-info-circle text-muted pull-right inform" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Last 24 Hours"></i>
+            <h4 class="text-dark font-18">Sales status</h4>
+            <h2 class="text-warning text-center"><span data-plugin="counterup">874</span></h2>
+            <p class="text-muted">Total sales: 2398 <span class="pull-right"><i class="fa fa-caret-down text-danger m-r-5"></i>7.85%</span></p>
+        </div>
+    </div>
+
+</div>
+
+<!-- BAR Chart -->
+<div class="row">
+    <div class="col-lg-12 col-xl-6">
+        <div class="portlet">
+            <!-- /primary heading -->
+            <div class="portlet-heading">
+                <h3 class="portlet-title text-dark"> Total Revenue </h3>
+                <div class="portlet-widgets">
+                    <a href="javascript:;" data-toggle="reload"><i class="ion-refresh"></i></a>
+                    <span class="divider"></span>
+                    <a data-toggle="collapse" data-parent="#accordion1" href="#bg-default1"><i class="ion-minus-round"></i></a>
+                    <span class="divider"></span>
+                    <a href="#" data-toggle="remove"><i class="ion-close-round"></i></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div id="bg-default1" class="panel-collapse collapse show">
+                <div class="portlet-body">
+                    <div class="text-center">
+                        <ul class="list-inline chart-detail-list">
+                            <li class="list-inline-item">
+                                <h5><i class="fa fa-circle m-r-5" style="color: #3ac9d6;"></i>Series A</h5>
+                            </li>
+                            <li class="list-inline-item">
+                                <h5><i class="fa fa-circle m-r-5" style="color: #f9c851;"></i>Series B</h5>
+                            </li>
+                            <li class="list-inline-item">
+                                <h5><i class="fa fa-circle m-r-5" style="color: #ebeff2;"></i>Series C</h5>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="morris-bar-example" style="height: 300px;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /Portlet -->
+    </div>
+    <!-- col -->
+    <div class="col-lg-12 col-xl-6">
+        <div class="portlet">
+            <!-- /primary heading -->
+            <div class="portlet-heading">
+                <h3 class="portlet-title text-dark"> Sales Analytics </h3>
+                <div class="portlet-widgets">
+                    <a href="javascript:;" data-toggle="reload"><i class="ion-refresh"></i></a>
+                    <span class="divider"></span>
+                    <a data-toggle="collapse" data-parent="#accordion1" href="#bg-default"><i class="ion-minus-round"></i></a>
+                    <span class="divider"></span>
+                    <a href="#" data-toggle="remove"><i class="ion-close-round"></i></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div id="bg-default" class="panel-collapse collapse show">
+                <div class="portlet-body">
+                    <div class="text-center">
+                        <ul class="list-inline chart-detail-list">
+                            <li class="list-inline-item">
+                                <h5><i class="fa fa-circle m-r-5" style="color: #4793f5;"></i>Mobiles</h5>
+                            </li>
+                            <li class="list-inline-item">
+                                <h5><i class="fa fa-circle m-r-5" style="color: #ff3f4e;"></i>Tablets</h5>
+                            </li>
+                            <li class="list-inline-item">
+                                <h5><i class="fa fa-circle m-r-5" style="color: #bbbbbb;"></i>Desktops</h5>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="morris-area-example" style="height: 300px;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /Portlet -->
+    </div>
+    <!-- col -->
+</div>
+<!-- End row-->
+
+
+<div class="row">
+
+    <div class="col-12">
+
+        <div class="portlet">
+            <!-- /primary heading -->
+            <div class="portlet-heading">
+                <h3 class="portlet-title text-dark text-uppercase">
+                    Projects
+                </h3>
+                <div class="portlet-widgets">
+                    <a href="javascript:;" data-toggle="reload"><i class="ion-refresh"></i></a>
+                    <span class="divider"></span>
+                    <a data-toggle="collapse" data-parent="#accordion1" href="#portlet2"><i class="ion-minus-round"></i></a>
+                    <span class="divider"></span>
+                    <a href="#" data-toggle="remove"><i class="ion-close-round"></i></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div id="portlet2" class="panel-collapse collapse show">
+                <div class="portlet-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover mails m-0 table table-actions-bar">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Products</th>
+                                    <th>Start Date</th>
+                                    <th style="min-width: 90px;">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="active">
+                                    <td>
+                                        <img src="~/theme2-assets/images/users/avatar-2.jpg" alt="contact-img" title="contact-img" class="rounded-circle thumb-sm" />
+                                    </td>
+
+                                    <td>
+                                        Gorrod Kazu
+                                    </td>
+
+                                    <td>
+                                        <a href="#">GorrodKazu@dayrep.com</a>
+                                    </td>
+
+                                    <td>
+                                        <b><a href="" class="text-dark"><b>356</b></a> </b>
+                                    </td>
+
+                                    <td>
+                                        01/11/2003
+                                    </td>
+                                    <td>
+                                        <a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
+                                        <a href="#" class="table-action-btn"><i class="md md-close"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="~/theme2-assets/images/users/avatar-1.jpg" alt="contact-img" title="contact-img" class="rounded-circle thumb-sm" />
+                                    </td>
+
+                                    <td>
+                                        Ellal Kiosan
+                                    </td>
+
+                                    <td>
+                                        <a href="#">EllalKiosan@jourrapide.com</a>
+                                    </td>
+
+                                    <td>
+                                        <b><a href="" class="text-dark"><b>568</b></a> </b>
+                                    </td>
+
+                                    <td>
+                                        01/11/2003
+                                    </td>
+                                    <td>
+                                        <a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
+                                        <a href="#" class="table-action-btn"><i class="md md-close"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="~/theme2-assets/images/users/avatar-3.jpg" alt="contact-img" title="contact-img" class="rounded-circle thumb-sm" />
+                                    </td>
+
+                                    <td>
+                                        Mork'Ra Khard
+                                    </td>
+
+                                    <td>
+                                        <a href="#">MorkRaKhard@teleworm.us</a>
+                                    </td>
+                                    <td>
+                                        <b><a href="" class="text-dark"><b>201</b></a> </b>
+                                    </td>
+
+                                    <td>
+                                        12/11/2003
+                                    </td>
+                                    <td>
+                                        <a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
+                                        <a href="#" class="table-action-btn"><i class="md md-close"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="~/theme2-assets/images/users/avatar-4.jpg" alt="contact-img" title="contact-img" class="rounded-circle thumb-sm" />
+                                    </td>
+
+                                    <td>
+                                        Kathrin Propst
+                                    </td>
+
+                                    <td>
+                                        <a href="#">KathrinPropst@teleworm.us</a>
+                                    </td>
+
+                                    <td>
+                                        <b><a href="" class="text-dark"><b>56</b></a> </b>
+                                    </td>
+
+                                    <td>
+                                        14/11/2003
+                                    </td>
+                                    <td>
+                                        <a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
+                                        <a href="#" class="table-action-btn"><i class="md md-close"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="~/theme2-assets/images/users/avatar-5.jpg" alt="contact-img" title="contact-img" class="rounded-circle thumb-sm" />
+                                    </td>
+
+                                    <td>
+                                        Swen Kunze
+                                    </td>
+
+                                    <td>
+                                        <a href="#">SwenKunze@rhyta.com</a>
+                                    </td>
+
+                                    <td>
+                                        <b><a href="" class="text-dark"><b>356</b></a> </b>
+                                    </td>
+
+                                    <td>
+                                        20/11/2003
+                                    </td>
+                                    <td>
+                                        <a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
+                                        <a href="#" class="table-action-btn"><i class="md md-close"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="~/theme2-assets/images/users/avatar-6.jpg" alt="contact-img" title="contact-img" class="rounded-circle thumb-sm" />
+                                    </td>
+
+                                    <td>
+                                        Sabine Kuester
+                                    </td>
+
+                                    <td>
+                                        <a href="#">SabineKuester@jourrapide.com</a>
+                                    </td>
+
+                                    <td>
+                                        <b><a href="" class="text-dark"><b>956</b></a> </b>
+                                    </td>
+
+                                    <td>
+                                        24/11/2003
+                                    </td>
+                                    <td>
+                                        <a href="#" class="table-action-btn"><i class="md md-edit"></i></a>
+                                        <a href="#" class="table-action-btn"><i class="md md-close"></i></a>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col -->
+
+</div>
+
+@section Scripts{
+    <!-- Counterup  -->
+    <script src="~/theme2-assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="~/theme2-assets/plugins/counterup/jquery.counterup.min.js"></script>
+
+    <script src="~/theme2-assets/plugins/morris/morris.min.js"></script>
+    <script src="~/theme2-assets/plugins/raphael/raphael-min.js"></script>
+
+    <script src="~/theme2-assets/pages/jquery.dashboard_4.js"></script>
+}
