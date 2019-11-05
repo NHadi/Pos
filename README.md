@@ -19,7 +19,7 @@ Sample Application DDD Reactive Microservices with CQRS & Event Sourcing with [D
 ![Image of DDD](https://github.com/NHadi/Pos/blob/master/images/ddd.png)
 
 1. Domain Layer : Main of Application like Event, Repository, etc
-2. Infrastructure Layer : Dataabases, Files, etc
+2. Infrastructure Layer : Databases, Files, etc
 3. Application Layer : WebApi, etc
 
 # Main Architecture
