@@ -72,4 +72,58 @@ cd Pos
 docker-compose up
 ```
 
+wait for completed
+
+![Image of step1](https://github.com/NHadi/Pos/blob/master/images/step1.png)
+
+**List Url:Port the app**
+```sh
+docker container ls
+```
+
+![Image of step2](https://github.com/NHadi/Pos/blob/master/images/step2.png)
+
+For sample we can navigate to PRODUCT SERVICES ::localhost:32771/swagger
+
+![Image of step3](https://github.com/NHadi/Pos/blob/master/images/step3.png)
+
+# Running in GATEWAY
+
+Navigate to postgateway for sample ::localhost:32768/[SERVICES]/[Action]
+
+![Image of step4(https://github.com/NHadi/Pos/blob/master/images/step4.png)
+
+Sample Running in Gateway
+http://localhost:[PosGatewayPort]/api-product/productCategory/7a3fff4b-54ca-4c21-bf04-c11aea9b7673
+![Image of step5](https://github.com/NHadi/Pos/blob/master/images/step5.png)
+
+# List of Gateway Services
+
+1. Product Services = localhost[::]/api-product/[action]
+2. Customer Services = localhost[::]/api-customer/[action]
+3. Product Services = localhost[::]/api-product/[action]
+4. Report Services = localhost[::]/api-report/[action]
+
+# Check Healty All Services
+![Image of step6](https://github.com/NHadi/Pos/blob/master/images/step6.png)
+
+
+Keep Updates, I'will update for new best practices of technology & software design, architectural
+
+# Thanks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
