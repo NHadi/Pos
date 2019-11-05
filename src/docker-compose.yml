@@ -28,24 +28,6 @@ services:
     depends_on:
       - sql.data
 
-  pos.webapplication:
-    image: ${DOCKER_REGISTRY-}poswebapplication
-    build:
-      context: .
-      dockerfile: Pos.WebApplication/Dockerfile
-
-  pos.gateway.securities:
-    image: ${DOCKER_REGISTRY-}posgatewaysecurities
-    build:
-      context: .
-      dockerfile: Pos.Gateway.Securities/Dockerfile
-
-  pos.gateway:
-    image: ${DOCKER_REGISTRY-}posgateway
-    build:
-      context: .
-      dockerfile: Pos.Gateway/Dockerfile
-
   sql.data:
     image: microsoft/mssql-server-linux:2017-latest
     environment:
@@ -88,4 +70,25 @@ services:
       - "8081"  
 
 
+
+
+  pos.gateway:
+    image: ${DOCKER_REGISTRY-}posgateway
+    build:
+      context: .
+      dockerfile: Pos.Gateway/Dockerfile
+
+
+  pos.gateway.securities:
+    image: ${DOCKER_REGISTRY-}posgatewaysecurities
+    build:
+      context: .
+      dockerfile: Pos.Gateway.Securities/Dockerfile
+
+
+  pos.webapplication:
+    image: ${DOCKER_REGISTRY-}poswebapplication
+    build:
+      context: .
+      dockerfile: Pos.WebApplication/Dockerfile
 

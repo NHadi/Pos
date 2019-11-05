@@ -32,22 +32,22 @@
         "AllowedScopes": []
       }
     },
-    //{
-    //  "DownstreamPathTemplate": "/api/{everything}",
-    //  "DownstreamScheme": "http",
-    //  "DownstreamHostAndPorts": [
-    //    {
-    //      "Host": "pos.order.webapi",
-    //      "Port": 80
-    //    }
-    //  ],
-    //  "UpstreamPathTemplate": "/api-order/{everything}",
-    //  "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-    //  "AuthenticationOptions": {
-    //    //"AuthenticationProviderKey": "Bearer",
-    //    "AllowedScopes": []
-    //  }
-    //},
+    {
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "pos.order.webapi",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api-order/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "AuthenticationOptions": {
+        //"AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
     {
       "DownstreamPathTemplate": "/api/{everything}",
       "DownstreamScheme": "http",

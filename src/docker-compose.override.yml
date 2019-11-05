@@ -25,12 +25,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development            
     ports:
       - "80"
-
-  pos.webapplication:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "80"    
+  
 
   pos.gateway:
     environment:
@@ -38,7 +33,15 @@ services:
     ports:
       - "80"
 
+
   pos.gateway.securities:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+
+  pos.webapplication:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:

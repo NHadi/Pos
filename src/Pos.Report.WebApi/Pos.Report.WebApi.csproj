@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pos.Event.Contracts\Pos.Event.Contracts.csproj" />
     <ProjectReference Include="..\Pos.Report.Domain\Pos.Report.Domain.csproj" />
     <ProjectReference Include="..\Pos.Report.Infrastructure\Pos.Report.Infrastructure.csproj" />
   </ItemGroup>
