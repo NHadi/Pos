@@ -7,6 +7,7 @@ WORKDIR /src
 COPY ["Pos.Report.WebApi/Pos.Report.WebApi.csproj", "Pos.Report.WebApi/"]
 COPY ["Pos.Report.Infrastructure/Pos.Report.Infrastructure.csproj", "Pos.Report.Infrastructure/"]
 COPY ["Pos.Report.Domain/Pos.Report.Domain.csproj", "Pos.Report.Domain/"]
+COPY ["Pos.Event.Contracts/Pos.Event.Contracts.csproj", "Pos.Event.Contracts/"]
 RUN dotnet restore "Pos.Report.WebApi/Pos.Report.WebApi.csproj"
 COPY . .
 WORKDIR "/src/Pos.Report.WebApi"

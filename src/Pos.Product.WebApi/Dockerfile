@@ -6,6 +6,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
 WORKDIR /src
 COPY ["Pos.Product.WebApi/Pos.Product.WebApi.csproj", "Pos.Product.WebApi/"]
 COPY ["Pos.Product.Domain/Pos.Product.Domain.csproj", "Pos.Product.Domain/"]
+COPY ["Pos.Event.Contracts/Pos.Event.Contracts.csproj", "Pos.Event.Contracts/"]
 COPY ["Pos.Product.Infrastructure/Pos.Product.Infrastructure.csproj", "Pos.Product.Infrastructure/"]
 RUN dotnet restore "Pos.Product.WebApi/Pos.Product.WebApi.csproj"
 COPY . .
