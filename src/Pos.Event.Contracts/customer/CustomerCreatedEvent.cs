@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pos.Customer.Domain.Events
+namespace Pos.Event.Contracts
 {
     [Event("CustomerCreated")]
     public class CustomerCreatedEvent : IEvent

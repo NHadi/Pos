@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="report\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dermayon.Common" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>

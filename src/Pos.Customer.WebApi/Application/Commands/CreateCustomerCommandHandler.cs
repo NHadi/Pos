@@ -1,11 +1,9 @@
 ﻿using Dermayon.Common.Domain;
 using Dermayon.Common.Infrastructure.Data.Contracts;
 using Dermayon.Infrastructure.EvenMessaging.Kafka.Contracts;
-using Pos.Customer.Domain.Events;
 using Pos.Customer.Infrastructure.EventSources;
+using Pos.Event.Contracts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 

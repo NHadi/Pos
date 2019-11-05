@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pos.Product.Domain.Events
+namespace Pos.Event.Contracts
 {
     [Event("ProductCategoryDeleted")]
     public class ProductCategoryDeletedEvent : IEvent

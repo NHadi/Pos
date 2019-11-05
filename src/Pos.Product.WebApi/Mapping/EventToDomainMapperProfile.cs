@@ -1,13 +1,7 @@
 ﻿using AutoMapper;
-using Pos.Customer.WebApi.Application.Commands;
-using Pos.Product.Domain.Events;
+using Pos.Event.Contracts;
 using Pos.Product.Domain.ProductAggregate;
-using Pos.Product.WebApi.Application.Commands;
-using Pos.Product.WebApi.Application.Commands.ProductCategories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Pos.Product.WebApi.Mapping
 {

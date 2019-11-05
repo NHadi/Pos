@@ -4,7 +4,6 @@ using Dermayon.Infrastructure.EvenMessaging.Kafka;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Pos.Product.Domain.Events;
 using Pos.Product.Infrastructure;
 using Pos.Product.Infrastructure.EventSources;
 using Pos.Product.Infrastructure.Repositories;
@@ -17,6 +16,8 @@ using Pos.Customer.WebApi.Application.Commands;
 using Pos.Product.WebApi.Application.Commands.ProductCategories;
 using Pos.Product.Domain.ProductAggregate.Contracts;
 using Pos.Customer.WebApi.Application.Queries;
+using Pos.Event.Contracts;
+using Pos.Product.WebApi.Application.EventHandlers.SagaPattern;
 
 namespace Pos.Product.WebApi
 {
@@ -38,6 +39,8 @@ namespace Pos.Product.WebApi
                         .RegisterKafkaConsumer<ProductCategoryCreatedEvent, ProductCategoryCreateEventHandler>()
                         .RegisterKafkaConsumer<ProductCategoryUpdatedEvent, ProductCategoryUpdateEventHandler>()
                         .RegisterKafkaConsumer<ProductCategoryDeletedEvent, ProductCategoryDeleteEventHandler>()
+                        //implement choreography saga 
+                        .RegisterKafkaConsumer<OrderCreatedEvent, OrderCreatedEventHandler>()
                    .RegisterMongo()
                    // Implement CQRS Event Sourcing =>  [Commands]
                    .RegisterEventSources()
@@ -90,7 +93,7 @@ namespace Pos.Product.WebApi
             services.AddTransient<ProductUpdateEventHandler>();
 
             services.AddTransient<ICommandHandler<DeleteProductCommand>, DeleteProductCommandHandler>();
-            services.AddTransient<ProductDeleteEventHandler>();
+            services.AddTransient<ProductDeleteEventHandler>();            
             #endregion
 
             #region Product Category Commands
@@ -103,6 +106,12 @@ namespace Pos.Product.WebApi
             services.AddTransient<ICommandHandler<DeleteProductCategoryCommand>, DeleteProductCategoryCommandHandler>();
             services.AddTransient<ProductCategoryDeleteEventHandler>();
             #endregion
+
+            #region saga pattern
+            //implement choreography saga 
+            services.AddTransient<OrderCreatedEventHandler>();
+            #endregion
+
 
             return services;
         }

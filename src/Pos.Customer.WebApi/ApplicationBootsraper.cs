@@ -5,21 +5,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pos.Customer.Domain.CustomerAggregate;
-using Pos.Customer.Domain.Events;
 using Pos.Customer.Infrastructure;
 using Pos.Customer.Infrastructure.EventSources;
 using Pos.Customer.Infrastructure.Repositories;
 using Pos.Customer.WebApi.Application.Commands;
 using Pos.Customer.WebApi.Application.EventHandlers;
+using Pos.Customer.WebApi.Application.EventHandlers.SagaPattern;
 using Pos.Customer.WebApi.Application.Queries;
 using Pos.Customer.WebApi.Mapping;
-using Serilog;
-using Serilog.Exceptions;
-using Serilog.Sinks.Elasticsearch;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Pos.Event.Contracts;
 
 namespace Pos.Customer.WebApi
 {
@@ -36,6 +30,8 @@ namespace Pos.Customer.WebApi
                         .RegisterKafkaConsumer<CustomerCreatedEvent, CustomerCreateEventHandler>()
                         .RegisterKafkaConsumer<CustomerUpdatedEvent, CustomerUpdateEventHandler>()
                         .RegisterKafkaConsumer<CustomerDeletedEvent, CustomerDeleteEventHandler>()
+                        //implement choreography saga 
+                        .RegisterKafkaConsumer<OrderCreatedEvent, OrderCreatedEventHandler>()
                    .RegisterMongo()
                    // Implement CQRS Event Sourcing => UserContextEvents [Commands]
                    .RegisterEventSources()
@@ -85,6 +81,9 @@ namespace Pos.Customer.WebApi
 
             services.AddTransient<ICommandHandler<DeleteCustomerCommand>, DeleteCustomerCommandHandler>();
             services.AddTransient<CustomerDeleteEventHandler>();
+
+            //implement choreography saga 
+            services.AddTransient<OrderCreatedEventHandler>();
             return services;
         }
     }

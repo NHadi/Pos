@@ -5,12 +5,9 @@ using Dermayon.Infrastructure.Data.EFRepositories.Contracts;
 using Dermayon.Infrastructure.EvenMessaging.Kafka.Contracts;
 using Newtonsoft.Json.Linq;
 using Pos.Customer.Domain.CustomerAggregate;
-using Pos.Customer.Domain.Events;
 using Pos.Customer.Infrastructure;
-using Pos.Customer.WebApi.Application.Commands;
+using Pos.Event.Contracts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 

@@ -4,14 +4,11 @@ using Dermayon.Common.Infrastructure.EventMessaging;
 using Dermayon.Infrastructure.Data.EFRepositories.Contracts;
 using Dermayon.Infrastructure.EvenMessaging.Kafka.Contracts;
 using Newtonsoft.Json.Linq;
-using Pos.Product.Domain.Events;
+using Pos.Event.Contracts;
 using Pos.Product.Domain.ProductAggregate;
 using Pos.Product.Domain.ProductAggregate.Contracts;
 using Pos.Product.Infrastructure;
-using Pos.Product.WebApi.Application.Commands;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
