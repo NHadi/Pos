@@ -71,9 +71,7 @@ The Reactive Manifesto outlines qualities of Reactive Systems based on four prin
 cd Pos 
 docker-compose up
 ```
-
 wait for completed
-
 ![Image of step1](https://github.com/NHadi/Pos/blob/master/images/step1.png)
 
 **List Url:Port the app**
@@ -91,7 +89,7 @@ For sample we can navigate to PRODUCT SERVICES ::localhost:32771/swagger
 
 Navigate to postgateway for sample ::localhost:32768/[SERVICES]/[Action]
 
-![Image of step4(https://github.com/NHadi/Pos/blob/master/images/step4.png)
+![Image of step4](https://github.com/NHadi/Pos/blob/master/images/step4.png)
 
 Sample Running in Gateway
 http://localhost:[PosGatewayPort]/api-product/productCategory/7a3fff4b-54ca-4c21-bf04-c11aea9b7673
