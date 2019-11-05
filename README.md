@@ -99,7 +99,7 @@ http://localhost:[PosGatewayPort]/api-product/productCategory/7a3fff4b-54ca-4c21
 
 1. Product Services = localhost[::]/api-product/[action]
 2. Customer Services = localhost[::]/api-customer/[action]
-3. Product Services = localhost[::]/api-product/[action]
+3. Order Services = localhost[::]/api-order/[action]
 4. Report Services = localhost[::]/api-report/[action]
 
 # Check Healty All Services
