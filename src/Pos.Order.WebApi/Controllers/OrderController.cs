@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Pos.Customer.WebApi.Application.Queries;
 using Pos.Order.WebApi.Application.Commands;
+using Pos.Order.WebApi.Application.DTO;
 
 namespace Pos.Order.WebApi.Controllers
 {
@@ -43,8 +44,9 @@ namespace Pos.Order.WebApi.Controllers
             try
             {
                 var data = await _orderQueries.GetOrders();
+                var response = _mapper.Map<List<DetailOrderResponse>>(data);
 
-                return Ok(new ApiOkResponse(data, data.Count()));
+                return Ok(new ApiOkResponse(response, response.Count()));
             }
             catch (Exception ex)
             {
@@ -60,8 +62,9 @@ namespace Pos.Order.WebApi.Controllers
             try
             {
                 var data = await _orderQueries.GetOrder(id);
+                var response = _mapper.Map<DetailOrderResponse>(data);
 
-                return Ok(new ApiOkResponse(data, data != null ? 1 : 0));
+                return Ok(new ApiOkResponse(response, response != null ? 1 : 0));
             }
             catch (Exception ex)
             {
@@ -72,11 +75,15 @@ namespace Pos.Order.WebApi.Controllers
 
         // POST api/customer
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CreateOrderCommand request)
+        public async Task<IActionResult> Post([FromBody] CreateOrderHeaderRequest request)
         {
             try
             {
-                await _createOrderCommand.Handle(request, CancellationToken.None);
+                var orderCommand = new CreateOrderCommand();
+                orderCommand = _mapper.Map<CreateOrderCommand>(request);                                
+                orderCommand.Amount = request.GetTotal();
+
+                await _createOrderCommand.Handle(orderCommand, CancellationToken.None);
                 return Ok(new ApiResponse(200));
             }
             catch (Exception ex)

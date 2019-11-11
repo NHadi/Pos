@@ -9,5 +9,6 @@ namespace Pos.Event.Contracts.order
     public class OrderCancelledEvent : IEvent
     {
         public Guid OrderId { get; set; }
+        public OrderCreatedEvent Data { get; set; }
     } 
 }

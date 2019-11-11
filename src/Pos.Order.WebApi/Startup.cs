@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Pos.Order.WebApi.SeedingData;
 
 namespace Pos.Order.WebApi
 {
@@ -45,6 +46,9 @@ namespace Pos.Order.WebApi
 
 
             app.UseMvc();
+
+            //Seeder
+            DbSeeder.Up(app.ApplicationServices);
         }
     }
 }

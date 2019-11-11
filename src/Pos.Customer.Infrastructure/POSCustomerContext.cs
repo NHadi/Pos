@@ -30,7 +30,7 @@ namespace Pos.Customer.Infrastructure
 
             modelBuilder.Entity<MstCustomer>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Id).HasDefaultValueSql("NEWID()");
 
                 entity.Property(e => e.Address).HasMaxLength(255);
 

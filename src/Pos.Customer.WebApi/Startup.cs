@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Pos.Customer.WebApi.SeedingData;
 
 namespace Pos.Customer.WebApi
 {
@@ -38,6 +39,9 @@ namespace Pos.Customer.WebApi
             app.UseSwaggerUi3();
 
             app.UseMvc();
+
+            //Seeder
+            DbSeeder.Up(app.ApplicationServices);
         }
     }
 }

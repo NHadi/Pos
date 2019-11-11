@@ -17,7 +17,7 @@ namespace Pos.Product.WebApi.Application.EventHandlers.SagaPattern
     {
         private readonly IMapper _mapper;
         private readonly IKakfaProducer _producer;
-        private readonly IProductQueries _productQueries;
+        private readonly IProductQueries _productQueries;        
 
         public OrderCreatedEventHandler(
             IMapper mapper,
@@ -39,26 +39,25 @@ namespace Pos.Product.WebApi.Application.EventHandlers.SagaPattern
 
                 var dataConsomed = jObject.ToObject<OrderCreatedEvent>();
 
-                var allProduct = dataConsomed.OrderItems
-                    .Select(x => x.PartNumber)
+                var allProduct = dataConsomed.OrderDetail
+                    .Select(x => x.ProductId)
                     .ToList();
 
                 //Consume data and validate the data
                 allProduct.ForEach(async item =>
                 {
-                    var dataIsExist = await _productQueries.GetProductByPartNumber(item);
+                    var dataIsExist = await _productQueries.GetProduct(item);
                     if (dataIsExist == null)
                         orderIsValid = false;                    
                 });
                 
                 if (orderIsValid == false)
                 {
-                    message = "Customer not found";
+                    message = "Product not found";
                 }
 
-                var @event = new OrderValidatedEvent { OrderId = dataConsomed.OrderId, IsValid = orderIsValid, Messages = new List<string> { message } };
-
-                await _producer.Send(@event, "PosServices");
+                var @event = new OrderValidatedEvent { Action = "Product", Data = dataConsomed, OrderId = dataConsomed.OrderId, IsValid = orderIsValid, Messages = new List<string> { message } };
+                await _producer.Send(@event, AppGlobalTopic.PosTopic);
             }
             catch (Exception ex)
             {

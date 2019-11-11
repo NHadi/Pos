@@ -11,7 +11,7 @@ namespace Pos.Order.WebApi.Mapping
         public EventoDomainMapperProfile()
         {
             CreateMap<OrderCreatedEvent, MstOrder>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()));
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.OrderId));
                             
         }
     }

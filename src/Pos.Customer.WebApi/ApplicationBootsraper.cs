@@ -10,7 +10,6 @@ using Pos.Customer.Infrastructure.EventSources;
 using Pos.Customer.Infrastructure.Repositories;
 using Pos.Customer.WebApi.Application.Commands;
 using Pos.Customer.WebApi.Application.EventHandlers;
-using Pos.Customer.WebApi.Application.EventHandlers.SagaPattern;
 using Pos.Customer.WebApi.Application.Queries;
 using Pos.Customer.WebApi.Mapping;
 using Pos.Event.Contracts;
@@ -29,9 +28,7 @@ namespace Pos.Customer.WebApi
                        .Configure<KafkaEventProducerConfiguration>(Configuration.GetSection("KafkaProducer"))
                         .RegisterKafkaConsumer<CustomerCreatedEvent, CustomerCreateEventHandler>()
                         .RegisterKafkaConsumer<CustomerUpdatedEvent, CustomerUpdateEventHandler>()
-                        .RegisterKafkaConsumer<CustomerDeletedEvent, CustomerDeleteEventHandler>()
-                        //implement choreography saga 
-                        .RegisterKafkaConsumer<OrderCreatedEvent, OrderCreatedEventHandler>()
+                        .RegisterKafkaConsumer<CustomerDeletedEvent, CustomerDeleteEventHandler>()                        
                    .RegisterMongo()
                    // Implement CQRS Event Sourcing => UserContextEvents [Commands]
                    .RegisterEventSources()
@@ -82,8 +79,6 @@ namespace Pos.Customer.WebApi
             services.AddTransient<ICommandHandler<DeleteCustomerCommand>, DeleteCustomerCommandHandler>();
             services.AddTransient<CustomerDeleteEventHandler>();
 
-            //implement choreography saga 
-            services.AddTransient<OrderCreatedEventHandler>();
             return services;
         }
     }

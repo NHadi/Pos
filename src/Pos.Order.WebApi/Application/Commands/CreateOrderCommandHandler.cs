@@ -10,6 +10,8 @@ using Pos.Order.Infrastructure;
 using Pos.Order.Infrastructure.EventSources;
 using System.Threading;
 using System.Threading.Tasks;
+using System;
+using System.IO;
 
 namespace Pos.Order.WebApi.Application.Commands
 {
@@ -37,13 +39,14 @@ namespace Pos.Order.WebApi.Application.Commands
 
         public async Task Handle(CreateOrderCommand command, CancellationToken cancellationToken)
         {
-            var @event = _mapper.Map<OrderCreatedEvent>(command);            
+            var @event = _mapper.Map<OrderCreatedEvent>(command);
+           
             // Insert event to Command Db
             await _eventSources.InserEvent(@event, cancellationToken);          
-            await _kafkaProducer.Send(@event, "PosServices");
+            await _kafkaProducer.Send(@event, AppGlobalTopic.PosTopic);
 
             //implement choreography saga needed
-            var data = _mapper.Map<MstOrder>(command);
+            var data = _mapper.Map<MstOrder>(@event);
             _orderRepository.Insert(data);
             await _uow.CommitAsync();
         }

@@ -14,6 +14,7 @@ namespace Pos.Order.Infrastructure
         public POSOrderContext(DbContextOptions<POSOrderContext> options)
             : base(options)
         {
+            this.Database.EnsureCreated();
         }
 
         public virtual DbSet<MstOrder> Order { get; set; }
@@ -32,7 +33,7 @@ namespace Pos.Order.Infrastructure
 
             modelBuilder.Entity<MstOrder>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Id).HasDefaultValueSql("NEWID()");
 
                 entity.Property(e => e.Amount).HasColumnType("decimal(18, 0)");
 
@@ -59,15 +60,10 @@ namespace Pos.Order.Infrastructure
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Id).HasDefaultValueSql("NEWID()");
 
                 entity.Property(e => e.UnitPrice).HasColumnType("decimal(18, 0)");
-
-                entity.HasOne(d => d.Order)
-                    .WithMany(p => p.OrderDetail)
-                    .HasForeignKey(d => d.OrderId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_OrderDetail_Order");
+              
             });
 
             OnModelCreatingPartial(modelBuilder);

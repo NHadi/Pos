@@ -22,15 +22,13 @@ namespace Pos.Order.WebApi.Application.EventHandlers
         private readonly IKakfaProducer _producer;
         private readonly IEventRepository<POSOrderEventContext, OrderShippedEvent> _shipedEventSources;
         private readonly IEventRepository<POSOrderEventContext, OrderCancelledEvent> _cancelledEventSources;
-        private readonly IUnitOfWork<POSOrderContext> _uow;
-        private readonly IOrderRepository _orderRepository;
         public OrderValidatedEventHandler(IKakfaProducer producer,
             IEventRepository<POSOrderEventContext, OrderShippedEvent> shipedEventSources,
             IEventRepository<POSOrderEventContext, OrderCancelledEvent> cancelledEventSources)
         {
             _producer = producer;
             _shipedEventSources = shipedEventSources;
-            _cancelledEventSources = cancelledEventSources;
+            _cancelledEventSources = cancelledEventSources;            
         }
 
         public async Task Handle(JObject jObject, ILog log, CancellationToken cancellationToken)
@@ -38,17 +36,17 @@ namespace Pos.Order.WebApi.Application.EventHandlers
             var orderValidated = jObject.ToObject<OrderValidatedEvent>();
             if (orderValidated.IsValid)
             {
-                var orderShippedEvent = new OrderShippedEvent{OrderId = orderValidated.OrderId};
+                var orderShippedEvent = new OrderShippedEvent{ Data = orderValidated.Data, OrderId = orderValidated.OrderId};
                 await _shipedEventSources.InserEvent(orderShippedEvent, cancellationToken);
 
-                await _producer.Send(orderShippedEvent, "PosServices");
+                await _producer.Send(orderShippedEvent, AppGlobalTopic.PosTopic);
             }
             else
             {
-                var orderCanceledEvent = new OrderCancelledEvent { OrderId = orderValidated.OrderId };
+                var orderCanceledEvent = new OrderCancelledEvent { Data = orderValidated.Data, OrderId = orderValidated.OrderId };
                 await _cancelledEventSources.InserEvent(orderCanceledEvent, cancellationToken);
 
-                await _producer.Send(orderCanceledEvent, "PosServices");
+                await _producer.Send(orderCanceledEvent, AppGlobalTopic.PosTopic);
             }
         }
     }

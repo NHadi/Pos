@@ -23,11 +23,13 @@ namespace Pos.Order.WebApi.Application.EventHandlers
         private readonly IUnitOfWork<POSOrderContext> _uow;
         private readonly IOrderRepository _orderRepository;
         public OrderCanceledEventHandler(IKakfaProducer producer,
-            IOrderRepository orderRepository
+            IOrderRepository orderRepository,
+            IUnitOfWork<POSOrderContext> uow
             )
         {
             _producer = producer;
             _orderRepository = orderRepository;
+            _uow = uow;
         }
 
         public async Task Handle(JObject jObject, ILog log, CancellationToken cancellationToken)

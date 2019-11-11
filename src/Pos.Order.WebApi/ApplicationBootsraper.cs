@@ -29,6 +29,7 @@ namespace Pos.Order.WebApi
                        .Configure<KafkaEventProducerConfiguration>(Configuration.GetSection("KafkaProducer"))
                         .RegisterKafkaConsumer<OrderShippedEvent, OrderShippedEventHandler>()
                         .RegisterKafkaConsumer<OrderCancelledEvent, OrderCanceledEventHandler>()
+                        .RegisterKafkaConsumer<OrderValidatedEvent, OrderValidatedEventHandler>()
                    .RegisterMongo()
                    // Implement CQRS Event Sourcing => UserContextEvents [Commands]
                    .RegisterEventSources()
@@ -50,7 +51,9 @@ namespace Pos.Order.WebApi
             {
                 cfg.AddProfile(new CommandToEventMapperProfile());
                 cfg.AddProfile(new DomainToCommandMapperProfile());
-                cfg.AddProfile(new EventoDomainMapperProfile());                
+                cfg.AddProfile(new EventoDomainMapperProfile());
+                cfg.AddProfile(new DtotoAllMapperProfile());
+                cfg.AddProfile(new AllToDtoMapperProfile());
             });            
             services.AddSingleton(provider => mapperConfig.CreateMapper());
 
@@ -73,6 +76,7 @@ namespace Pos.Order.WebApi
             services.AddTransient<ICommandHandler<CreateOrderCommand>, CreateOrderCommandHandler>();
             services.AddTransient<OrderShippedEventHandler>();
             services.AddTransient<OrderCanceledEventHandler>();
+            services.AddTransient<OrderValidatedEventHandler>();
             return services;
         }
     }

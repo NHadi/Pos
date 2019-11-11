@@ -29,6 +29,12 @@ namespace Pos.Gateway
             Configuration = builder.Build();
         }
 
+        //public Startup(IConfiguration configuration)
+        //{
+        //    Configuration = configuration;
+        //}
+
+
 
         public IConfiguration Configuration { get; }
 

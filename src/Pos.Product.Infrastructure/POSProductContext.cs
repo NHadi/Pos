@@ -33,7 +33,7 @@ namespace Pos.Product.Infrastructure
 
             modelBuilder.Entity<MstProduct>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Id).HasDefaultValueSql("NEWID()");
 
                 entity.Property(e => e.Name)
                     .IsRequired()
@@ -54,14 +54,16 @@ namespace Pos.Product.Infrastructure
 
             modelBuilder.Entity<ProductCategory>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Id).HasDefaultValueSql("NEWID()");
 
                 entity.Property(e => e.Name).HasMaxLength(50);
             });
+
 
             OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        
     }
 }

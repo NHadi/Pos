@@ -10,7 +10,7 @@ namespace Pos.Event.Contracts
     {
         public OrderCreatedEvent()
         {
-            OrderItems = new List<OrderDetailDto>();
+            OrderDetail = new List<OrderDetailDto>();
         }
 
         public Guid OrderId { get; set; }
@@ -25,6 +25,6 @@ namespace Pos.Event.Contracts
         public string ShipCity { get; set; }
         public string ShipPostalCode { get; set; }
         public string ShipCountry { get; set; }
-        public IEnumerable<OrderDetailDto> OrderItems { get; set; }
+        public IEnumerable<OrderDetailDto> OrderDetail { get; set; }
     }
 }

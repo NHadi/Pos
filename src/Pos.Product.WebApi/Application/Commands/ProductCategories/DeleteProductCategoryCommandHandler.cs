@@ -33,7 +33,7 @@ namespace Pos.Product.WebApi.Application.Commands
             // Insert event to Command Db
             await _eventSources.InserEvent(DeletedEvent, cancellationToken);
 
-            await _kafkaProducer.Send(DeletedEvent, "PosServices");
+            await _kafkaProducer.Send(DeletedEvent, AppGlobalTopic.PosTopic);
         }
     }
 }

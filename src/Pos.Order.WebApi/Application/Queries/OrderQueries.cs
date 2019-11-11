@@ -39,7 +39,7 @@ namespace Pos.Customer.WebApi.Application.Queries
 
         public async Task<IEnumerable<MstOrder>> GetOrders()
         {
-            var data = await _orderRepository.GetIncludeAsync(null, includes: src => src.Include(x => x.OrderDetail));
+            var data = await _orderRepository.GetIncludeAsync(x => x.Status != null, includes: src => src.Include(x => x.OrderDetail));
 
             return data.ToList();
         }

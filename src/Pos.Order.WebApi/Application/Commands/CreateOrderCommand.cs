@@ -12,8 +12,9 @@ namespace Pos.Order.WebApi.Application.Commands
     {
         public CreateOrderCommand()
         {
-            OrderItems = new List<OrderDetailCommand>();
+            OrderDetail = new List<OrderDetailDto>();
         }
+        public Guid OrderId { get; set; }
         public Guid? CustomerId { get; set; }
         public DateTime? OrderDate { get; set; }
         public string OrderNumber { get; set; }
@@ -24,18 +25,11 @@ namespace Pos.Order.WebApi.Application.Commands
         public string ShipCity { get; set; }
         public string ShipPostalCode { get; set; }
         public string ShipCountry { get; set; }
-        public List<OrderDetailCommand> OrderItems { get; set; }     
+        public List<OrderDetailDto> OrderDetail { get; set; }     
         
         public void AddProduct(Guid product, int? quantity, decimal? unitPrice = null)
         {
-            OrderItems.Add(new OrderDetailCommand { ProductId = product, Quantity = quantity, UnitPrice = unitPrice });
+            OrderDetail.Add(new OrderDetailDto { ProductId = product, Quantity = quantity, UnitPrice = unitPrice });
         }
-    }
-
-    public class OrderDetailCommand
-    {
-        public Guid ProductId { get; set; }
-        public int? Quantity { get; set; }
-        public decimal? UnitPrice { get; set; }        
-    }
+    }  
 }
