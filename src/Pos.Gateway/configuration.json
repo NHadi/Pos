@@ -21,6 +21,11 @@
         "Period": "1s",
         "PeriodTimespan": 1,
         "Limit": 1
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 3000
       }
     },
     {
@@ -44,6 +49,11 @@
         "Period": "1s",
         "PeriodTimespan": 1,
         "Limit": 1
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 3000
       }
     },
     {
@@ -67,6 +77,11 @@
         "Period": "1s",
         "PeriodTimespan": 1,
         "Limit": 1
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 3000
       }
     },
     {
@@ -90,6 +105,11 @@
         "Period": "1s",
         "PeriodTimespan": 1,
         "Limit": 1
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 2,
+        "DurationOfBreak": 5000,
+        "TimeoutValue": 3000
       }
     },
     {
